@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeopardy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #060CE9;
+      color: #FFD700;
+      font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── Screen system ─────────────────────────────────────────── */
+    .screen { display: none; }
+    .screen.active {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* ── Game select screen ────────────────────────────────────── */
+    #select-screen {
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      background: #060CE9;
+    }
+
+    #select-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      text-align: center;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+      letter-spacing: 0.05em;
+    }
+
+    #select-subtitle {
+      font-size: 1rem;
+      color: rgba(255,215,0,0.6);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: -16px;
+    }
+
+    #game-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: min(520px, 88vw);
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+
+    .game-file-btn {
+      background: #0a0a8a;
+      border: 2px solid rgba(255,215,0,0.5);
+      color: #FFD700;
+      padding: 16px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: inherit;
+      border-radius: 7px;
+      cursor: pointer;
+      text-align: left;
+      letter-spacing: 0.03em;
+      transition: background 0.12s, border-color 0.12s;
+    }
+    .game-file-btn:hover {
+      background: #13138a;
+      border-color: #FFD700;
+    }
+    .game-file-btn .file-display-name { display: block; }
+    .game-file-btn .file-raw-name {
+      display: block;
+      font-size: 0.7rem;
+      color: rgba(255,215,0,0.4);
+      font-weight: normal;
+      margin-top: 3px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Setup screen ──────────────────────────────────────────── */
+    #setup-screen {
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      background: #060CE9;
+    }
+
+    #setup-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      text-align: center;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+      letter-spacing: 0.05em;
+    }
+
+    #setup-box {
+      background: #0a0a8a;
+      border: 3px solid #FFD700;
+      border-radius: 10px;
+      padding: 36px 44px;
+      width: min(580px, 92vw);
+    }
+
+    .setup-label {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      color: rgba(255,215,0,0.8);
+      text-transform: uppercase;
+    }
+
+    .count-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .count-btn {
+      width: 46px;
+      height: 46px;
+      border: 2px solid #FFD700;
+      background: transparent;
+      color: #FFD700;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      font-family: inherit;
+      transition: background 0.12s, color 0.12s;
+    }
+    .count-btn:hover { background: rgba(255,215,0,0.15); }
+    .count-btn.selected { background: #FFD700; color: #060CE9; }
+
+    #player-names {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .name-input {
+      background: rgba(6,12,233,0.6);
+      border: 2px solid rgba(255,215,0,0.5);
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border-radius: 5px;
+      font-family: inherit;
+      width: 100%;
+      transition: border-color 0.15s;
+    }
+    .name-input:focus { outline: none; border-color: #FFD700; }
+    .name-input::placeholder { color: rgba(255,255,255,0.3); }
+
+    #start-btn {
+      width: 100%;
+      padding: 15px;
+      background: #FFD700;
+      color: #060CE9;
+      border: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      font-family: inherit;
+      letter-spacing: 0.05em;
+      transition: background 0.12s, transform 0.1s;
+    }
+    #start-btn:hover { background: #FFC200; transform: translateY(-1px); }
+    #start-btn:active { transform: translateY(0); }
+
+    /* ── Board screen ──────────────────────────────────────────── */
+    #board-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: minmax(56px, auto) repeat(5, 1fr);
+      gap: 3px;
+      padding: 3px;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .cat-header {
+      background: #060CE9;
+      color: #FFD700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8px 6px;
+      font-size: clamp(0.6rem, 1.2vw, 1rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      border: 2px solid #000;
+    }
+
+    .tile {
+      background: #060CE9;
+      color: #FFD700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(1rem, 2.8vw, 2rem);
+      font-weight: 900;
+      cursor: pointer;
+      border: 2px solid #000;
+      text-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+      transition: background 0.1s;
+      user-select: none;
+      letter-spacing: 0.02em;
+    }
+    .tile:hover { background: #1c1cf5; }
+    .tile.used {
+      color: #1e2066;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* ── Scoreboard ────────────────────────────────────────────── */
+    #scoreboard {
+      flex-shrink: 0;
+      background: #09090d;
+      border-top: 3px solid #FFD700;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 8px;
+      flex-wrap: wrap;
+      min-height: 88px;
+    }
+
+    .player-card {
+      background: #13132a;
+      border: 2px solid #FFD700;
+      border-radius: 6px;
+      padding: 6px 10px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      min-width: 110px;
+      max-width: 150px;
+      flex: 1;
+    }
+
+    .player-name-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,215,0,0.3);
+      color: #FFD700;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      font-family: inherit;
+      letter-spacing: 0.05em;
+    }
+    .player-name-input:focus { outline: none; border-bottom-color: #FFD700; }
+
+    .player-score-input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.35rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      font-family: inherit;
+      -moz-appearance: textfield;
+    }
+    .player-score-input::-webkit-inner-spin-button,
+    .player-score-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+    .player-score-input:focus {
+      outline: none;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+    }
+    .player-score-input.negative { color: #ff6060; }
+
+    .score-buttons {
+      display: flex;
+      gap: 5px;
+      width: 100%;
+    }
+
+    .score-btn {
+      flex: 1;
+      padding: 3px 4px;
+      border-radius: 3px;
+      border: 1px solid;
+      font-size: 0.68rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      transition: background 0.1s, color 0.1s;
+    }
+    .score-btn-minus { border-color: #ff5555; color: #ff5555; background: transparent; }
+    .score-btn-minus:hover { background: #ff5555; color: #fff; }
+    .score-btn-plus  { border-color: #55cc55; color: #55cc55; background: transparent; }
+    .score-btn-plus:hover  { background: #55cc55; color: #000; }
+
+    /* ── Question / Answer screens ─────────────────────────────── */
+    #question-screen,
+    #answer-screen {
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px 48px 28px;
+      background: #060CE9;
+      text-align: center;
+    }
+
+    .qa-value {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: #FFD700;
+      font-weight: 900;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+
+    .qa-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 960px;
+      padding: 16px 0;
+      overflow: hidden;
+    }
+
+    .content-text {
+      font-size: clamp(1.6rem, 3.8vw, 3.4rem);
+      color: #fff;
+      line-height: 1.4;
+      max-width: 85vw;
+      word-wrap: break-word;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .content-image {
+      max-width: 90vw;
+      max-height: 62vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .content-youtube {
+      width: min(800px, 90vw);
+      aspect-ratio: 16 / 9;
+    }
+    .content-youtube iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .content-image-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 90vw;
+    }
+    .content-image-text .content-image { max-height: 45vh; }
+    .content-image-text .content-text  { font-size: clamp(1.2rem, 2.8vw, 2.4rem); }
+
+    .qa-hint {
+      color: rgba(255,215,0,0.45);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    /* ── Game controls ─────────────────────────────────────────── */
+    #game-controls {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .ctrl-btn {
+      padding: 6px 14px;
+      border-radius: 5px;
+      border: 1px solid;
+      font-size: 0.75rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+      letter-spacing: 0.04em;
+      transition: background 0.12s, color 0.12s;
+    }
+    .ctrl-btn-reset { border-color: #FFD700; color: #FFD700; background: transparent; }
+    .ctrl-btn-reset:hover { background: #FFD700; color: #060CE9; }
+    .ctrl-btn-close { border-color: #ff5555; color: #ff5555; background: transparent; }
+    .ctrl-btn-close:hover { background: #ff5555; color: #fff; }
+
+    /* ── Confirm modal ──────────────────────────────────────────── */
+    #confirm-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    #confirm-overlay.visible { display: flex; }
+
+    #confirm-box {
+      background: #0a0a8a;
+      border: 3px solid #FFD700;
+      border-radius: 10px;
+      padding: 36px 44px;
+      text-align: center;
+      max-width: 420px;
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    #confirm-message {
+      font-size: 1.2rem;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    #confirm-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .confirm-btn {
+      padding: 10px 36px;
+      border-radius: 6px;
+      border: 2px solid;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.12s, color 0.12s;
+    }
+    .confirm-yes { border-color: #55cc55; color: #55cc55; background: transparent; }
+    .confirm-yes:hover { background: #55cc55; color: #000; }
+    .confirm-no  { border-color: #FFD700;  color: #FFD700;  background: transparent; }
+    .confirm-no:hover  { background: #FFD700; color: #060CE9; }
+
+    /* ── Error screen ──────────────────────────────────────────── */
+    #error-screen {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      padding: 48px;
+    }
+    #error-screen h1 { font-size: 2rem; }
+    #error-msg { color: #ff8888; font-family: monospace; font-size: 1rem; }
+    #error-screen p { color: rgba(255,255,255,0.55); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Error -->
+  <div id="error-screen" class="screen">
+    <h1>Could not load game-data.json</h1>
+    <p id="error-msg"></p>
+    <p>Make sure you launched via <code>python server.py</code> and that game-data.json exists.</p>
+  </div>
+
+  <!-- Setup -->
+  <div id="setup-screen" class="screen">
+    <div id="setup-title">Jeopardy!</div>
+    <div id="setup-box">
+      <div class="setup-label">Number of Players</div>
+      <div class="count-row" id="count-row"></div>
+      <div class="setup-label">Player Names</div>
+      <div id="player-names"></div>
+      <button id="start-btn" onclick="startGame()">Start Game</button>
+    </div>
+  </div>
+
+  <!-- Game select -->
+  <div id="select-screen" class="screen">
+    <div id="select-title">Jeopardy!</div>
+    <div id="select-subtitle">Select a Game</div>
+    <div id="game-list"></div>
+  </div>
+
+  <!-- Confirm modal (shared, lives outside any screen) -->
+  <div id="confirm-overlay">
+    <div id="confirm-box">
+      <div id="confirm-message"></div>
+      <div id="confirm-buttons">
+        <button class="confirm-btn confirm-yes" id="confirm-yes">Yes</button>
+        <button class="confirm-btn confirm-no"  id="confirm-no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Board -->
+  <div id="board-screen" class="screen" style="position:relative;">
+    <div id="board-grid"></div>
+    <div id="scoreboard"></div>
+    <div id="game-controls">
+      <button class="ctrl-btn ctrl-btn-reset" onclick="confirmAction('Reset the game? Scores and progress will be cleared.', resetGame)">Reset Game</button>
+      <button class="ctrl-btn ctrl-btn-close" onclick="confirmAction('Close the game and return to setup?', closeGame)">Close Game</button>
+    </div>
+  </div>
+
+  <!-- Question -->
+  <div id="question-screen" class="screen">
+    <div class="qa-value" id="q-value"></div>
+    <div class="qa-content" id="q-content"></div>
+    <div class="qa-hint">Spacebar &rarr; Reveal Answer &nbsp;|&nbsp; Escape &rarr; Back to Board</div>
+  </div>
+
+  <!-- Answer -->
+  <div id="answer-screen" class="screen">
+    <div class="qa-value" id="a-value"></div>
+    <div class="qa-content" id="a-content"></div>
+    <div class="qa-hint">Escape &rarr; Return to Board</div>
+  </div>
+
+  <script>
+    // ── State ────────────────────────────────────────────────────
+    let gameData    = null;
+    let players     = [];          // [{ name, score }]
+    let usedTiles   = new Set();   // "catIdx-rowIdx"
+    let lastValue   = 0;           // value of last-opened tile
+    let currentTile = null;        // { catIdx, rowIdx }
+    let activeScreen = null;
+
+    // ── Screen helper ────────────────────────────────────────────
+    function showScreen(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      activeScreen = id;
+    }
+
+    // ── Init ─────────────────────────────────────────────────────
+    async function init() {
+      try {
+        const res = await fetch('/api/games');
+        if (!res.ok) throw new Error(`Could not reach server API (HTTP ${res.status})`);
+        const files = await res.json();
+
+        if (files.length === 0) throw new Error('No .json files found in the game folder.');
+
+        if (files.length === 1) {
+          await loadGameFile(files[0]);
+        } else {
+          buildSelectScreen(files);
+          showScreen('select-screen');
+        }
+      } catch (e) {
+        document.getElementById('error-msg').textContent = e.message;
+        showScreen('error-screen');
+      }
+    }
+
+    function buildSelectScreen(files) {
+      const list = document.getElementById('game-list');
+      list.innerHTML = '';
+      files.forEach(filename => {
+        const btn = document.createElement('button');
+        btn.className = 'game-file-btn';
+
+        const displayName = filename
+          .replace(/\.json$/i, '')
+          .replace(/[-_]/g, ' ')
+          .replace(/\b\w/g, c => c.toUpperCase());
+
+        btn.innerHTML = `
+          <span class="file-display-name">${displayName}</span>
+          <span class="file-raw-name">${filename}</span>
+        `;
+        btn.onclick = () => loadGameFile(filename);
+        list.appendChild(btn);
+      });
+    }
+
+    async function loadGameFile(filename) {
+      try {
+        const res = await fetch(filename);
+        if (!res.ok) throw new Error(`HTTP ${res.status} – ${res.statusText}`);
+        gameData = await res.json();
+        buildSetupScreen();
+        showScreen('setup-screen');
+      } catch (e) {
+        document.getElementById('error-msg').textContent = e.message;
+        showScreen('error-screen');
+      }
+    }
+
+    // ── Setup ────────────────────────────────────────────────────
+    let selectedCount = 2;
+
+    function buildSetupScreen() {
+      document.getElementById('setup-title').textContent = gameData.title || 'Jeopardy!';
+
+      const row = document.getElementById('count-row');
+      row.innerHTML = '';
+      for (let n = 1; n <= 8; n++) {
+        const btn = document.createElement('button');
+        btn.className = 'count-btn' + (n === selectedCount ? ' selected' : '');
+        btn.textContent = n;
+        btn.onclick = () => selectCount(n);
+        row.appendChild(btn);
+      }
+      updateNameInputs();
+    }
+
+    function selectCount(n) {
+      selectedCount = n;
+      document.querySelectorAll('.count-btn').forEach((btn, i) =>
+        btn.classList.toggle('selected', i + 1 === n)
+      );
+      updateNameInputs();
+    }
+
+    function updateNameInputs() {
+      const container = document.getElementById('player-names');
+      const old = Array.from(container.querySelectorAll('.name-input')).map(i => i.value);
+      container.innerHTML = '';
+      for (let i = 0; i < selectedCount; i++) {
+        const inp = document.createElement('input');
+        inp.className = 'name-input';
+        inp.type = 'text';
+        inp.placeholder = `Player ${i + 1}`;
+        inp.value = old[i] || '';
+        container.appendChild(inp);
+      }
+    }
+
+    function startGame() {
+      const inputs = document.querySelectorAll('.name-input');
+      players = Array.from(inputs).map((inp, i) => ({
+        name:  inp.value.trim() || `Player ${i + 1}`,
+        score: 0,
+      }));
+      usedTiles.clear();
+      lastValue   = 0;
+      currentTile = null;
+      renderBoard();
+      renderScoreboard();
+      showScreen('board-screen');
+    }
+
+    // ── Board ────────────────────────────────────────────────────
+    function renderBoard() {
+      const grid = document.getElementById('board-grid');
+      grid.innerHTML = '';
+
+      // Category headers
+      gameData.categories.forEach(cat => {
+        const cell = document.createElement('div');
+        cell.className = 'cat-header';
+        cell.textContent = cat.name;
+        grid.appendChild(cell);
+      });
+
+      // 5 value rows
+      for (let row = 0; row < 5; row++) {
+        gameData.categories.forEach((cat, catIdx) => {
+          const q    = cat.questions[row];
+          const key  = `${catIdx}-${row}`;
+          const used = usedTiles.has(key);
+          const cell = document.createElement('div');
+          cell.className = 'tile' + (used ? ' used' : '');
+          cell.textContent = `$${q.value}`;
+          if (!used) cell.addEventListener('click', () => openQuestion(catIdx, row));
+          grid.appendChild(cell);
+        });
+      }
+    }
+
+    // ── Question / Answer ────────────────────────────────────────
+    function openQuestion(catIdx, rowIdx) {
+      const q     = gameData.categories[catIdx].questions[rowIdx];
+      currentTile = { catIdx, rowIdx };
+      lastValue   = q.value;
+
+      document.getElementById('q-value').textContent = `$${q.value}`;
+      const qc = document.getElementById('q-content');
+      qc.innerHTML = '';
+      qc.appendChild(renderContent(q.question));
+
+      renderScoreboard(); // refresh +/- button labels
+      showScreen('question-screen');
+    }
+
+    function revealAnswer() {
+      if (!currentTile) return;
+      const q = gameData.categories[currentTile.catIdx].questions[currentTile.rowIdx];
+
+      document.getElementById('a-value').textContent = `$${q.value}`;
+      const ac = document.getElementById('a-content');
+      ac.innerHTML = '';
+      ac.appendChild(renderContent(q.answer));
+
+      showScreen('answer-screen');
+    }
+
+    function returnToBoard() {
+      if (currentTile) {
+        usedTiles.add(`${currentTile.catIdx}-${currentTile.rowIdx}`);
+        currentTile = null;
+      }
+      // Stop any embedded media
+      document.getElementById('q-content').innerHTML = '';
+      document.getElementById('a-content').innerHTML = '';
+      renderBoard();
+      showScreen('board-screen');
+    }
+
+    // ── Content renderer ─────────────────────────────────────────
+    function renderContent(c) {
+      if (c.type === 'text') {
+        const div = document.createElement('div');
+        div.className = 'content-text';
+        div.textContent = c.content;
+        return div;
+      }
+
+      if (c.type === 'image') {
+        const img = document.createElement('img');
+        img.className = 'content-image';
+        img.src = c.content;
+        img.alt = '';
+        return img;
+      }
+
+      if (c.type === 'youtube') {
+        const id   = extractYouTubeId(c.content);
+        const wrap = document.createElement('div');
+        wrap.className = 'content-youtube';
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${id}?rel=0`;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        wrap.appendChild(iframe);
+        return wrap;
+      }
+
+      if (c.type === 'image-text') {
+        const wrap = document.createElement('div');
+        wrap.className = 'content-image-text';
+        const img = document.createElement('img');
+        img.className = 'content-image';
+        img.src = c.image;
+        img.alt = '';
+        const txt = document.createElement('div');
+        txt.className = 'content-text';
+        txt.textContent = c.content;
+        wrap.appendChild(img);
+        wrap.appendChild(txt);
+        return wrap;
+      }
+
+      const fallback = document.createElement('div');
+      fallback.className = 'content-text';
+      fallback.textContent = '[Unsupported content type: ' + c.type + ']';
+      return fallback;
+    }
+
+    function extractYouTubeId(url) {
+      if (url.length === 11 && !/[/?&]/.test(url)) return url; // bare ID
+      const m = url.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
+      return m ? m[1] : url;
+    }
+
+    // ── Scoreboard ───────────────────────────────────────────────
+    function renderScoreboard() {
+      const sb = document.getElementById('scoreboard');
+      sb.innerHTML = '';
+
+      players.forEach((player, i) => {
+        const card = document.createElement('div');
+        card.className = 'player-card';
+
+        // Name
+        const nameInp = document.createElement('input');
+        nameInp.className = 'player-name-input';
+        nameInp.value = player.name;
+        nameInp.setAttribute('aria-label', `Player ${i + 1} name`);
+        nameInp.addEventListener('input', e => { player.name = e.target.value; });
+
+        // Score
+        const scoreInp = document.createElement('input');
+        scoreInp.className = 'player-score-input' + (player.score < 0 ? ' negative' : '');
+        scoreInp.type = 'number';
+        scoreInp.value = player.score;
+        scoreInp.setAttribute('aria-label', `Player ${i + 1} score`);
+        scoreInp.addEventListener('change', e => {
+          player.score = parseInt(e.target.value) || 0;
+          renderScoreboard();
+        });
+
+        // +/- buttons
+        const btnRow = document.createElement('div');
+        btnRow.className = 'score-buttons';
+
+        const minus = document.createElement('button');
+        minus.className = 'score-btn score-btn-minus';
+        minus.textContent = `−$${lastValue}`;
+        minus.onclick = () => { player.score -= lastValue; renderScoreboard(); };
+
+        const plus = document.createElement('button');
+        plus.className = 'score-btn score-btn-plus';
+        plus.textContent = `+$${lastValue}`;
+        plus.onclick = () => { player.score += lastValue; renderScoreboard(); };
+
+        btnRow.appendChild(minus);
+        btnRow.appendChild(plus);
+
+        card.appendChild(nameInp);
+        card.appendChild(scoreInp);
+        card.appendChild(btnRow);
+        sb.appendChild(card);
+      });
+    }
+
+    // ── Keyboard ─────────────────────────────────────────────────
+    document.addEventListener('keydown', e => {
+      if (activeScreen === 'question-screen') {
+        if (e.code === 'Space') {
+          e.preventDefault();
+          revealAnswer();
+        } else if (e.code === 'Escape') {
+          returnToBoard();
+        }
+      } else if (activeScreen === 'answer-screen') {
+        if (e.code === 'Escape') {
+          returnToBoard();
+        }
+      } else if (activeScreen === 'setup-screen') {
+        if (e.code === 'Enter') startGame();
+      }
+    });
+
+    // ── Confirm modal ────────────────────────────────────────────
+    let confirmCallback = null;
+
+    function confirmAction(message, onYes) {
+      confirmCallback = onYes;
+      document.getElementById('confirm-message').textContent = message;
+      document.getElementById('confirm-overlay').classList.add('visible');
+      document.getElementById('confirm-no').focus();
+    }
+
+    document.getElementById('confirm-yes').onclick = () => {
+      document.getElementById('confirm-overlay').classList.remove('visible');
+      if (confirmCallback) { confirmCallback(); confirmCallback = null; }
+    };
+    document.getElementById('confirm-no').onclick = () => {
+      document.getElementById('confirm-overlay').classList.remove('visible');
+      confirmCallback = null;
+    };
+
+    function resetGame() {
+      usedTiles.clear();
+      lastValue   = 0;
+      currentTile = null;
+      players.forEach(p => p.score = 0);
+      document.getElementById('q-content').innerHTML = '';
+      document.getElementById('a-content').innerHTML = '';
+      renderBoard();
+      renderScoreboard();
+      showScreen('board-screen');
+    }
+
+    function closeGame() {
+      usedTiles.clear();
+      lastValue   = 0;
+      currentTile = null;
+      document.getElementById('q-content').innerHTML = '';
+      document.getElementById('a-content').innerHTML = '';
+      init(); // re-run init so multi-file users return to the select screen
+    }
+
+    init();
+  </script>
+</body>
+</html>
