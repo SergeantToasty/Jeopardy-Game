@@ -157,27 +157,27 @@
         {
           "value": 100,
           "question": { "type": "text", "content": "This silverware themed town is the main setting for Edward and Bella's incredible romance." },
-          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 100 Answer.png", "content": "What is Forks, Washington?" }
+          "answer":   { "type": "image-text", "image": "images/Male Fantasy 100 Answer.png", "content": "What is Forks, Washington?" }
         },
         {
           "value": 200,
           "question": { "type": "text", "content": "This season is most associated with Tamlin's Court in ACoTaR." },
-          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 200 Answer.jpg", "content": "What is Spring?" }
+          "answer":   { "type": "image-text", "image": "images/Male Fantasy 200 Answer.jpg", "content": "What is Spring?" }
         },
         {
           "value": 300,
           "question": { "type": "text", "content": "This very heterosexually named team features star center Ilya Rozanov." },
-          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 300 Answer.png", "content": "What is The Boston Bears?" }
+          "answer":   { "type": "image-text", "image": "images/Male Fantasy 300 Answer.png", "content": "What is The Boston Bears?" }
         },
         {
           "value": 400,
           "question": { "type": "text", "content": "This young hero is often portrayed as Achilles' 'Cousin' in more squeamish media, whereas in reality, they do be banging." },
-          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 400 Answer.jpg", "content": "Who is Patroclus?" }
+          "answer":   { "type": "image-text", "image": "images/Male Fantasy 400 Answer.jpg", "content": "Who is Patroclus?" }
         },
         {
           "value": 500,
           "question": { "type": "text", "content": "This acronym is used to help remember the symptom and action profiles when assessing if a stroke has occurred." },
-          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 500 Answer.png", "content": "What is FAST?" }
+          "answer":   { "type": "image-text", "image": "images/Male Fantasy 500 Answer.png", "content": "What is FAST?" }
         }
       ]
     }
