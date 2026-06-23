@@ -106,7 +106,7 @@
         },
         {
           "value": 300,
-          "question": { "type": "text", "content": "These two spots near Long Beach are conveniently quite close in this lovely little tourist spot." },
+          "question": { "type": "text", "content": "These two 'high up' spots near Long Beach are conveniently quite close in this lovely little tourist spot." },
           "answer":   { "type": "text", "content": "What is Ascension Island?" }
         },
         {
