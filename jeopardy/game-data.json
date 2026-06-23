@@ -12,22 +12,22 @@
         {
           "value": 200,
           "question": { "type": "text", "content": "This 2006 magician thriller features rubber balls, a love triangle involving Jessica Biel, and obsession with discovering the secret of a trick." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 200 Answer.png", "content": "What is The Illusionist?" }
+          "answer":   { "type": "image-text", "image": "images/Story Time 200 Answer.jpg", "content": "What is The Illusionist?" }
         },
         {
           "value": 300,
           "question": { "type": "text", "content": "This 2007 british film devolves into chaos after two magicians become bitter enemies following the death of their female assistant on stage." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 300 Answer.png", "content": "What is Magicians?" }
+          "answer":   { "type": "image-text", "image": "images/Story Time 300 Answer.jpg", "content": "What is Magicians?" }
         },
         {
           "value": 400,
           "question": { "type": "text", "content": "This antagonist from the hit 2010 game 'Super Meat Boy', is named after Ned's favorite feature of horror video games." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 400 Answer.png", "content": "Who is Dr. Fetus?" }
+          "answer":   { "type": "image-text", "image": "images/Story Time 400 Answer.jpg", "content": "Who is Dr. Fetus?" }
         },
         {
           "value": 500,
           "question": { "type": "text", "content": "Name a book written by a woman." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 500 Answer.png", "content": "Good for you." }
+          "answer":   { "type": "image-text", "image": "images/Story Time 500 Answer.jpg", "content": "Good for you." }
         }
       ]
     },
@@ -37,12 +37,12 @@
         {
           "value": 100,
           "question": { "type": "text", "content": "This fairly forgettable one term U.S. president ascended after the assassination of James Garfield and oversaw the rebirth of the U.S. Navy." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 100 Answer.png", "content": "Who is Chester A. Arthur?" }
+          "answer":   { "type": "image-text", "image": "images/Chest Positions 100 Answer.jpg", "content": "Who is Chester A. Arthur?" }
         },
         {
           "value": 200,
           "question": { "type": "text", "content": "This beautiful city is one of the westernmost cities in Brittany, and features a rich maritime history." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 200 Answer.png", "content": "What is Brest?" }
+          "answer":   { "type": "image-text", "image": "images/Chest Positions 200 Answer.jpg", "content": "What is Brest?" }
         },
         {
           "value": 300,
@@ -52,7 +52,7 @@
         {
           "value": 400,
           "question": { "type": "text", "content": "This highly decorated Marine Lieutenant General served in the Banana Wars, World War II, and the Korean War." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 400 Answer.png", "content": "Who is Lewis Burwell 'Chesty' Puller?" }
+          "answer":   { "type": "image-text", "image": "images/Chest Positions 400 Answer.jpg", "content": "Who is Lewis Burwell 'Chesty' Puller?" }
         },
         {
           "value": 500,
@@ -71,7 +71,7 @@
         },
         {
           "value": 200,
-          "question": { "type": "image", "content": "images/Untitled Goose Game 100 Question.png" },
+          "question": { "type": "image", "content": "images/Untitled Goose Game 100 Question.jpg" },
           "answer":   { "type": "text", "content": "Who is Ryan Goose?" }
         },
         {
@@ -81,7 +81,7 @@
         },
         {
           "value": 400,
-          "question": { "type": "image", "content": "images/Untitled Goose Game 400 Question.png" },
+          "question": { "type": "image", "content": "images/Untitled Goose Game 400 Question.jpg" },
           "answer":   { "type": "text", "content": "Who is Rooster?" }
         },
         {
@@ -101,7 +101,7 @@
         },
         {
           "value": 200,
-          "question": { "type": "image-text", "image": "images/Geoguesser 200 Question.png", "content": "This very rectangular island features such well named attractions as: New Shoreham, Natural Pond, The Painted Rock, and Natural Hole." },
+          "question": { "type": "image-text", "image": "images/Geoguesser 200 Question.jpg", "content": "This very rectangular island features such well named attractions as: New Shoreham, Natural Pond, The Painted Rock, and Natural Hole." },
           "answer":   { "type": "text", "content": "What is Block Island?" }
         },
         {
@@ -111,13 +111,13 @@
         },
         {
           "value": 400,
-          "question": { "type": "image-text", "image": "images/Geoguesser 400 Question.png", "content": "This gorgeous paradise was famously chosen by Napoleon as his summer vacation spot in 1814." },
+          "question": { "type": "image-text", "image": "images/Geoguesser 400 Question.jpg", "content": "This gorgeous paradise was famously chosen by Napoleon as his summer vacation spot in 1814." },
           "answer":   { "type": "text", "content": "What is Elba Island?" }
         },
         {
           "value": 500,
-          "question": { "type": "image-text", "image": "images/Geoguesser 500 Question.png", "content": "This quaint island hideaway in the Virgin Islands is technically known as Little Saint James Island, but we all know it as something else nowadays." },
-          "answer":   { "type": "text", "content": "What is Epstein Island?" }
+          "question": { "type": "image-text", "image": "images/Geoguesser 500 Question.jpg", "content": "This quaint island hideaway in the Virgin Islands is technically known as Little Saint James Island, but we all know it as something else nowadays." },
+          "answer":   { "type": "image-text", "image": "images/Geoguesser 500 Answer.jpg", "content": "What is Epstein Island?" }
         }
       ]
     },
@@ -127,7 +127,7 @@
         {
           "value": 100,
           "question": { "type": "text", "content": "This presidentially named Hall of Fame pitcher holds top 10 MLB records in IP and Wins." },
-          "answer":   { "type": "image-text", "image": "images/League Of Legends 100 Answer.png", "content": "Who is Grover Cleveland Alexander?" }
+          "answer":   { "type": "image-text", "image": "images/League Of Legends 100 Answer.jpg", "content": "Who is Grover Cleveland Alexander?" }
         },
         {
           "value": 200,
@@ -142,12 +142,12 @@
         {
           "value": 400,
           "question": { "type": "text", "content": "This 1994 hot prospect had a stellar Mendoza line BA in his play with the AA Birmingham Barons." },
-          "answer":   { "type": "image-text", "image": "images/League Of Legends 400 Answer.png", "content": "Who is Michael Jordan?" }
+          "answer":   { "type": "image-text", "image": "images/League Of Legends 400 Answer.jpg", "content": "Who is Michael Jordan?" }
         },
         {
           "value": 500,
           "question": { "type": "image", "content": "images/League Of Legends 500 Question.png"},
-          "answer":   { "type": "iamge", "content": "images/League Of Legends 500 Answer.png" }
+          "answer":   { "type": "iamge", "content": "images/League Of Legends 500 Answer.jpg" }
         }
       ]
     },
@@ -162,7 +162,7 @@
         {
           "value": 200,
           "question": { "type": "text", "content": "This season is most associated with Tamlin's Court in ACoTaR." },
-          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 200 Answer.png", "content": "What is Spring?" }
+          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 200 Answer.jpg", "content": "What is Spring?" }
         },
         {
           "value": 300,
@@ -172,7 +172,7 @@
         {
           "value": 400,
           "question": { "type": "text", "content": "This young hero is often portrayed as Achilles' 'Cousin' in more squeamish media, whereas in reality, they do be banging." },
-          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 400 Answer.png", "content": "Who is Patroclus?" }
+          "answer":   { "type": "image-text", "image": "images/The Male Fantasy 400 Answer.jpg", "content": "Who is Patroclus?" }
         },
         {
           "value": 500,
