@@ -7,7 +7,7 @@
         {
           "value": 100,
           "question": { "type": "text", "content": "This famous 16th century Spanish author discovered Pulmonary Circulation amongst his many notable writings." },
-          "answer":   { "type": "image-text", "image": "images/Story_Time_100_Answer.png", "content": "Who is Michael Servetus/Miguel Servet?" }
+          "answer":   { "type": "image-text", "image": "images/Story_Time_100_Answer.jpg", "content": "Who is Michael Servetus/Miguel Servet?" }
         },
         {
           "value": 200,
