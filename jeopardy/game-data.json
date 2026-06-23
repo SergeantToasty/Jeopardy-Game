@@ -71,7 +71,7 @@
         },
         {
           "value": 200,
-          "question": { "type": "image", "content": "images/Untitled Goose Game 100 Question.jpg" },
+          "question": { "type": "image", "content": "images/Untitled Goose Game 200 Question.jpg" },
           "answer":   { "type": "text", "content": "Who is Ryan Goose?" }
         },
         {
@@ -147,7 +147,7 @@
         {
           "value": 500,
           "question": { "type": "image", "content": "images/League Of Legends 500 Question.png"},
-          "answer":   { "type": "iamge", "content": "images/League Of Legends 500 Answer.jpg" }
+          "answer":   { "type": "image", "content": "images/League Of Legends 500 Answer.jpg" }
         }
       ]
     },
