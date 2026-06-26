@@ -2,12 +2,12 @@
   "title": "Very Fair and Balanced Jeopardy: Season 2",
   "categories": [
     {
-      "name": "Story Time",
+      "name": "The Later Films of Orson Welles",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "text", "content": "This famous 16th century Spanish author discovered Pulmonary Circulation amongst his many notable writings." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 100 Answer.jpg", "content": "Who is Michael Servetus/Miguel Servet?" }
+          "question": { "type": "image-text", "image": "images/Orson Welles 100 Question.jpg", "content": "Say a number"},
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 100 Answer.jpg", "content": "Who is at least 30 (BAD BOYS)?" }
         },
         {
           "value": 200,
@@ -26,8 +26,8 @@
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "Name a book written by a woman." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 500 Answer.jpg", "content": "Good for you." }
+          "question": { "type": "text", "content": "Ahhhhhhhhhhh, the French champagne." },
+          "answer":   { "type": "image-text", "image": "images/Story Time 500 Answer.jpg", "content": "Who is Orson Welles." }
         }
       ]
     },
