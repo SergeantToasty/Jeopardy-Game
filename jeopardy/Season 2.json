@@ -6,23 +6,23 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Orson Welles 100 Question.jpg", "content": "Say a number"},
-          "answer":   { "type": "image-text", "image": "images/Orson Welles 100 Answer.jpg", "content": "Who is at least 30 (BAD BOYS)?" }
+          "question": { "type": "image-text", "image": "images/Orson Welles 100 Question.jpg", "content": "Say a number that has to do with yourself"},
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 100 Answer.jpg", "content": "What is at least 30?" }
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "This 2006 magician thriller features rubber balls, a love triangle involving Jessica Biel, and obsession with discovering the secret of a trick." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 200 Answer.jpg", "content": "What is The Illusionist?" }
+          "question": { "type": "image-text", "image": "images/Orson Welles 200 Question.jpg", "content": "After decades on the force, this cop is definitely this?"},
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 200 Answer.jpg", "content": "What is too old for this shit?" }
         },
         {
           "value": 300,
-          "question": { "type": "text", "content": "This 2007 british film devolves into chaos after two magicians become bitter enemies following the death of their female assistant on stage." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 300 Answer.jpg", "content": "What is Magicians?" }
+          "question": { "type": "image-text", "image": "images/Orson Welles 300 Question.jpg", "content": "This beach, developed by a cutting edge pharma company, has one weird quirk" },
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 300 Answer.jpg", "content": "What is it makes you old?" }
         },
         {
           "value": 400,
-          "question": { "type": "text", "content": "This antagonist from the hit 2010 game 'Super Meat Boy', is named after Ned's favorite feature of horror video games." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 400 Answer.jpg", "content": "Who is Dr. Fetus?" }
+          "question": { "type": "text", "content": "This 2007 neo-western Coen brothers film features cat and mouse chases, gas canisters, and a very bad haircut." },
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 400 Answer.jpg", "content": "What is No Country for Old Men?" }
         },
         {
           "value": 500,
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "name": "Chest Positions",
+      "name": "Connect 5",
       "questions": [
         {
           "value": 100,
