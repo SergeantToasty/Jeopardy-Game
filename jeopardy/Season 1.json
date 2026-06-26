@@ -1,5 +1,5 @@
 {
-  "title": "Very Fair and Balanced Jeopardy",
+  "title": "Very Fair and Balanced Jeopardy: Season 1",
   "categories": [
     {
       "name": "Story Time",
@@ -42,7 +42,7 @@
         {
           "value": 200,
           "question": { "type": "text", "content": "This beautiful city is one of the westernmost cities in Brittany, and features a rich maritime history." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 200 Answer.jpg", "content": "What is Brest?" }
+          "answer":   { "type": "image-text", "image": "images/Chest Positions 200 Answer.jpg", "content": "What is Brest, France?" }
         },
         {
           "value": 300,
@@ -72,7 +72,7 @@
         {
           "value": 200,
           "question": { "type": "image", "content": "images/Untitled Goose Game 200 Question.jpg" },
-          "answer":   { "type": "text", "content": "Who is Ryan Goose?" }
+          "answer":   { "type": "text", "content": "Who is Ryan Gosling?" }
         },
         {
           "value": 300,
@@ -106,7 +106,7 @@
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Geoguesser 300 Question.png", "content": "These two 'high up' spots near Long Beach are conveniently quite close in this lovely little tourist spot named after a Call of Duty Zombies Map." },
+          "question": { "type": "image-text", "image": "images/Geoguesser 300 Question.png", "content": "These two 'high up' spots near Long Beach are in this lovely little tourist island named after a Call of Duty Zombies Map." },
           "answer":   { "type": "text", "content": "What is Ascension Island?" }
         },
         {
@@ -177,7 +177,7 @@
         {
           "value": 500,
           "question": { "type": "text", "content": "This acronym is used to help remember the symptom and action profiles when assessing if a stroke has occurred." },
-          "answer":   { "type": "image-text", "image": "images/Male Fantasy 500 Answer.png", "content": "What is FAST?" }
+          "answer":   { "type": "image-text", "image": "images/Male Fantasy 500 Answer.png", "content": "What is FAST?  (Face, Arm, Speech, Time)" }
         }
       ]
     }
