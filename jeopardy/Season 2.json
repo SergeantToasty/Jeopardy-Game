@@ -66,8 +66,8 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=Y5NTgZA-xWE" },
-          "answer":   { "type": "text", "content": "What is Ducks?" }
+          "question": { "type": "image-text", "image": "images/Jane Air 100 Question.jpg", "content": "While Grigori Mendeleev is recognized on the periodic table with Mendeleevium (101), he has a far more important contribution visible in this image" },
+          "answer":   { "type": "text", "content": "What is he invented a form of the Periodic Table?" }
         },
         {
           "value": 200,
