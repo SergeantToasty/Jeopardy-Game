@@ -67,27 +67,27 @@
         {
           "value": 100,
           "question": { "type": "image-text", "image": "images/Jane Air 100 Question.jpg", "content": "While Grigori Mendeleev is recognized on the periodic table with Mendeleevium (101), he has a far more important contribution visible in this image" },
-          "answer":   { "type": "text", "content": "What is he invented a form of the Periodic Table?" }
+          "answer":   { "type": "image-text", "image": "images/Jane Air 100 Answer.jpg", "content": "What is he invented a form of the Periodic Table?" }
         },
         {
           "value": 200,
-          "question": { "type": "image", "content": "images/Untitled Goose Game 200 Question.jpg" },
-          "answer":   { "type": "text", "content": "Who is Ryan Gosling?" }
+          "question": { "type": "text", "content": "The band famous for a song about a month infamously clearly never watched Avatar since they forgot to include this element in their band name" },
+          "answer":   { "type": "text", "content": "What is Water?" }
         },
         {
           "value": 300,
-          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=4GxhaMejEMY" },
-          "answer":   { "type": "text", "content": "What is duck?" }
+          "question": { "type": "text", "content": "This season/series of Yugioh introduced the Elemental series of monster cards" },
+          "answer":   { "type": "image-text", "image": "images/Jane Air 300 Answer.jpg", "content": "What is Yugioh GX?" }
         },
         {
           "value": 400,
-          "question": { "type": "image", "content": "images/Untitled Goose Game 400 Question.jpg" },
-          "answer":   { "type": "text", "content": "Who is Rooster?" }
+          "question": { "type": "text", "content": "Despite being his most famous catchphrase, Sherlock Holmes never actually says this line in any Arthur Conan Doyle book" },
+          "answer":   { "type": "text", "content": "What is 'Elementary, my dear Watson'?" }
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "Honk." },
-          "answer":   { "type": "text", "content": "Honk!" }
+          "question": { "type": "text", "content": "The ever hated Mr. Brocklehurst may be a villain, but he is a hard worker, holding these three jobs at Lowood" },
+          "answer":   { "type": "text", "content": "What is Clergy, Director, and Treasurer?" }
         }
       ]
     },
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "name": "League of Legends",
+      "name": "Ornithology",
       "questions": [
         {
           "value": 100,
