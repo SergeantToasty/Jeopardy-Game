@@ -6,17 +6,17 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Orson Welles 100 Question.jpg", "content": "Say a number that has to do with yourself"},
+          "question": { "type": "image-text", "image": "images/Orson Welles 100 Question.jpg", "content": "You are at least this old"},
           "answer":   { "type": "image-text", "image": "images/Orson Welles 100 Answer.jpg", "content": "What is at least 30?" }
         },
         {
           "value": 200,
-          "question": { "type": "image-text", "image": "images/Orson Welles 200 Question.jpg", "content": "After decades on the force, this cop is definitely this?"},
+          "question": { "type": "image-text", "image": "images/Orson Welles 200 Question.jpg", "content": "After decades on the force, this jaded cop is definitely this?"},
           "answer":   { "type": "image-text", "image": "images/Orson Welles 200 Answer.jpg", "content": "What is too old for this shit?" }
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Orson Welles 300 Question.jpg", "content": "This beach, developed by a cutting edge pharma company, has one weird quirk" },
+          "question": { "type": "image-text", "image": "images/Orson Welles 300 Question.jpg", "content": "In a 2021 film, this beach, developed by a cutting edge pharma company, has one weird quirk" },
           "answer":   { "type": "image-text", "image": "images/Orson Welles 300 Answer.jpg", "content": "What is it makes you old?" }
         },
         {
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "name": "Music Theory",
+      "name": "Jane Air",
       "questions": [
         {
           "value": 100,
@@ -92,32 +92,32 @@
       ]
     },
     {
-      "name": "Geoguesser",
+      "name": "Famous Female Novelists",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Geoguesser 100 Question.png", "content": "This tropical paradise in the Andaman islands has long been a popular destination for evangelists who like not coming back, and for people who like taking photos from 3 miles away." },
-          "answer":   { "type": "text", "content": "What is North Sentinel Island?" }
+          "question": { "type": "image", "content": "images/Famous Female Novelists 100 Question.jpg" },
+          "answer":   { "type": "text", "content": "Who is The Bronte Sisters?" }
         },
         {
           "value": 200,
-          "question": { "type": "image-text", "image": "images/Geoguesser 200 Question.jpg", "content": "This very rectangular island features such well named attractions as: New Shoreham, Natural Pond, The Painted Rock, and Natural Hole." },
-          "answer":   { "type": "text", "content": "What is Block Island?" }
+          "question": { "type": "image", "content": "images/Famous Female Novelists 200 Question.jpg" },
+          "answer":   { "type": "text", "content": "Who is Jane Austen?" }
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Geoguesser 300 Question.png", "content": "These two 'high up' spots near Long Beach are in this lovely little tourist island named after a Call of Duty Zombies Map." },
-          "answer":   { "type": "text", "content": "What is Ascension Island?" }
+          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=EMK4wsGLEy0" },
+          "answer":   { "type": "text", "content": "Who is Emily Dickinson?" }
         },
         {
           "value": 400,
-          "question": { "type": "image-text", "image": "images/Geoguesser 400 Question.jpg", "content": "This gorgeous paradise was famously chosen by Napoleon as his summer vacation spot in 1814." },
-          "answer":   { "type": "text", "content": "What is Elba Island?" }
+          "question": { "type": "image", "content": "images/Famous Female Novelists 400 Question.jpg" },
+          "answer":   { "type": "text", "content": "Who is Toni Morrison?" }
         },
         {
           "value": 500,
-          "question": { "type": "image-text", "image": "images/Geoguesser 500 Question.jpg", "content": "This quaint island hideaway in the Virgin Islands is technically known as Little Saint James Island, but we all know it as something else nowadays." },
-          "answer":   { "type": "image-text", "image": "images/Geoguesser 500 Answer.jpg", "content": "What is Epstein Island?" }
+          "question": { "type": "text", "content": "This famous 20th century novelist was so insecure about his wife's comments on the size of his penis that he showed it to Ernest Hemmingway to get an opinion." },
+          "answer":   { "type": "image-text", "image": "images/Famous Female Novelists 500 Answer.jpg", "content": "Who is F. Scott Fitzgerald?" }
         }
       ]
     },
