@@ -26,8 +26,8 @@
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "Ahhhhhhhhhhh, the French champagne." },
-          "answer":   { "type": "image-text", "image": "images/Story Time 500 Answer.jpg", "content": "Who is Orson Welles." }
+          "question": { "type": "text", "content": "Ahhhhhhhhhhh, the French champagne has always been celebrated for its excellence." },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=EMK4wsGLEy0" }
         }
       ]
     },
@@ -152,27 +152,27 @@
       ]
     },
     {
-      "name": "The Male Fantasy",
+      "name": "Anyway, here's Wonderwall",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "text", "content": "This silverware themed town is the main setting for Edward and Bella's incredible romance." },
-          "answer":   { "type": "image-text", "image": "images/Male Fantasy 100 Answer.png", "content": "What is Forks, Washington?" }
+          "question": { "type": "image-text", "image": "images/Wonderwall 100 Question.png", "content": "The name of this world famous classic band" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 100 Answer.png", "content": "What is The Beatles?" }
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "This season is most associated with Tamlin's Court in ACoTaR." },
-          "answer":   { "type": "image-text", "image": "images/Male Fantasy 200 Answer.jpg", "content": "What is Spring?" }
+          "question": { "type": "image-text", "image": "images/Wonderwall 200 Question.png", "content": "The name of this high flying British rock band" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 200 Answer.png.jpg", "content": "What is Led Zeppelin?" }
         },
         {
           "value": 300,
-          "question": { "type": "text", "content": "This very heterosexually named team features star center Ilya Rozanov." },
-          "answer":   { "type": "image-text", "image": "images/Male Fantasy 300 Answer.png", "content": "What is The Boston Bears?" }
+          "question": { "type": "image-text", "image": "images/Wonderwall 300 Question.png", "content": "This contemporary Canadian artist surprised the world with his charming dark R&B sound" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 300 Answer.png.jpg", "content": "What is The Weeknd?" }
         },
         {
           "value": 400,
-          "question": { "type": "text", "content": "This young hero is often portrayed as Achilles' 'Cousin' in more squeamish media, whereas in reality, they do be banging." },
-          "answer":   { "type": "image-text", "image": "images/Male Fantasy 400 Answer.jpg", "content": "Who is Patroclus?" }
+          "question": { "type": "image-text", "image": "images/Wonderwall 400 Question.png", "content": "This band's iconic 'four guys standing in front of a color' album art was parodied in Ultrakill amongst many other places" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 400 Answer.png", "content": "Who is Weezer?" }
         },
         {
           "value": 500,
