@@ -16,8 +16,8 @@
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Orson Welles 300 Question.jpg", "content": "In a 2021 film, this beach, developed by a cutting edge pharma company, has one weird quirk" },
-          "answer":   { "type": "image-text", "image": "images/Orson Welles 300 Answer.jpg", "content": "What is it makes you old?" }
+          "question": { "type": "image-text", "image": "images/Orson Welles 300 Question.jpg", "content": "In this 2021 film, a beach, developed by a cutting edge pharma company, has one weird quirk" },
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 300 Answer.jpg", "content": "What is it makes you old/Old?" }
         },
         {
           "value": 400,
