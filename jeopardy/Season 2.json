@@ -37,27 +37,27 @@
         {
           "value": 100,
           "question": { "type": "text", "content": "This fairly forgettable one term U.S. president ascended after the assassination of James Garfield and oversaw the rebirth of the U.S. Navy." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 100 Answer.jpg", "content": "Who is Chester A. Arthur?" }
+          "answer":   { "type": "image-text", "image": "images/Connect 5 100 Answer.jpg", "content": "What is Italy?" }
         },
         {
           "value": 200,
           "question": { "type": "text", "content": "This beautiful city is one of the westernmost cities in Brittany, and features a rich maritime history." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 200 Answer.jpg", "content": "What is Brest, France?" }
+          "answer":   { "type": "image-text", "image": "images/Connect 5 200 Answer.jpg", "content": "What is Spain?" }
         },
         {
           "value": 300,
           "question": { "type": "text", "content": "This treaty was a separate peace between the central and Soviet powers in 1918 that effectively ended the eastern front of World War I." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 300 Answer.png", "content": "What is The Treaty of Brest-Litovsk?" }
+          "answer":   { "type": "image-text", "image": "images/Connect 5 300 Answer.png", "content": "What is Germany?" }
         },
         {
           "value": 400,
           "question": { "type": "text", "content": "This highly decorated Marine Lieutenant General served in the Banana Wars, World War II, and the Korean War." },
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 400 Answer.jpg", "content": "Who is Lewis Burwell 'Chesty' Puller?" }
+          "answer":   { "type": "image-text", "image": "images/Connect 5 400 Answer.jpg", "content": "What is France?" }
         },
         {
           "value": 500,
-          "question": { "type": "image-text", "image": "images/Chest Positions 500 Question.png", "content": "Find the best move for White."},
-          "answer":   { "type": "image-text", "image": "images/Chest Positions 500 Answer.png", "content": "Google En Passant."}
+          "question": { "type": "image-text", "image": "images/Connect 5 500 Question.png", "content": "This is the fifth item in the sequence."},
+          "answer":   { "type": "image-text", "image": "images/Connect 5 500 Answer.png", "content": "What is Argentina."}
         }
       ]
     },
@@ -176,8 +176,8 @@
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "This acronym is used to help remember the symptom and action profiles when assessing if a stroke has occurred." },
-          "answer":   { "type": "image-text", "image": "images/Male Fantasy 500 Answer.png", "content": "What is FAST?  (Face, Arm, Speech, Time)" }
+          "question": { "type": "text", "content": "This 'inn' in Greenwich Village was the site of the 1969 riots that are often credited as the beginning of the gay rights movement in America." },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 500 Answer.png", "content": "What is Stonewall" }
         }
       ]
     }
