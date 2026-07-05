@@ -1,1 +1,185 @@
-
+{
+  "title": "Very Fair and Balanced Jeopardy: Season 3",
+  "categories": [
+    {
+      "name": "Family Guy Clips on Youtube",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "image-text", "image": "images/Orson Welles 100 Question.jpg", "content": "You are at least this old"},
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 100 Answer.jpg", "content": "What is at least 30?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "image-text", "image": "images/Orson Welles 200 Question.jpg", "content": "After decades on the force, this jaded cop is definitely this?"},
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 200 Answer.jpg", "content": "What is too old for this shit?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "image-text", "image": "images/Orson Welles 300 Question.jpg", "content": "In this 2021 film, a beach, developed by a cutting edge pharma company, has one weird quirk" },
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 300 Answer.jpg", "content": "What is it makes you old/Old?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "text", "content": "This 2007 neo-western Coen brothers film features cat and mouse chases, gas canisters, and a very bad haircut." },
+          "answer":   { "type": "image-text", "image": "images/Orson Welles 400 Answer.jpg", "content": "What is No Country for Old Men?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "text", "content": "Ahhhhhhhhhhh, the French champagne has always been celebrated for its excellence." },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=EMK4wsGLEy0" }
+        }
+      ]
+    },
+    {
+      "name": "Connect 5",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "text", "content": "This fairly forgettable one term U.S. president ascended after the assassination of James Garfield and oversaw the rebirth of the U.S. Navy." },
+          "answer":   { "type": "image-text", "image": "images/Connect 5 100 Answer.jpg", "content": "What is Italy?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "text", "content": "This beautiful city is one of the westernmost cities in Brittany, and features a rich maritime history." },
+          "answer":   { "type": "image-text", "image": "images/Connect 5 200 Answer.jpg", "content": "What is Spain?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "text", "content": "This treaty was a separate peace between the central and Soviet powers in 1918 that effectively ended the eastern front of World War I." },
+          "answer":   { "type": "image-text", "image": "images/Connect 5 300 Answer.png", "content": "What is Germany?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "text", "content": "This highly decorated Marine Lieutenant General served in the Banana Wars, World War II, and the Korean War." },
+          "answer":   { "type": "image-text", "image": "images/Connect 5 400 Answer.jpg", "content": "What is France?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "image-text", "image": "images/Connect 5 500 Question.png", "content": "This is the fifth item in the sequence."},
+          "answer":   { "type": "image-text", "image": "images/Connect 5 500 Answer.png", "content": "What is Argentina."}
+        }
+      ]
+    },
+    {
+      "name": "Jane Air",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "image-text", "image": "images/Jane Air 100 Question.jpg", "content": "While Grigori Mendeleev is recognized on the periodic table with Mendeleevium (101), he has a far more important contribution visible in this image" },
+          "answer":   { "type": "image-text", "image": "images/Jane Air 100 Answer.jpg", "content": "What is he invented a form of the Periodic Table?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "text", "content": "The band famous for a song about a month infamously clearly never watched Avatar since they forgot to include this element in their band name" },
+          "answer":   { "type": "text", "content": "What is Water?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "text", "content": "This season/series of Yugioh introduced the Elemental series of monster cards" },
+          "answer":   { "type": "image-text", "image": "images/Jane Air 300 Answer.jpg", "content": "What is Yugioh GX?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "text", "content": "Despite being his most famous catchphrase, Sherlock Holmes never actually says this line in any Arthur Conan Doyle book" },
+          "answer":   { "type": "text", "content": "What is 'Elementary, my dear Watson'?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "text", "content": "The ever hated Mr. Brocklehurst may be a villain, but he is a hard worker, holding these three jobs at Lowood" },
+          "answer":   { "type": "text", "content": "What is Clergy, Director, and Treasurer?" }
+        }
+      ]
+    },
+    {
+      "name": "Famous Female Novelists",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "image", "content": "images/Famous Female Novelists 100 Question.jpg" },
+          "answer":   { "type": "text", "content": "Who is The Bronte Sisters?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "image", "content": "images/Famous Female Novelists 200 Question.jpg" },
+          "answer":   { "type": "text", "content": "Who is Jane Austen?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=EMK4wsGLEy0" },
+          "answer":   { "type": "text", "content": "Who is Emily Dickinson?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "image", "content": "images/Famous Female Novelists 400 Question.jpg" },
+          "answer":   { "type": "text", "content": "Who is Toni Morrison?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "text", "content": "This famous 20th century novelist was so insecure about his wife's comments on the size of his penis that he showed it to Ernest Hemmingway to get an opinion." },
+          "answer":   { "type": "image-text", "image": "images/Famous Female Novelists 500 Answer.jpg", "content": "Who is F. Scott Fitzgerald?" }
+        }
+      ]
+    },
+    {
+      "name": "Ornithology",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "text", "content": "This presidentially named Hall of Fame pitcher holds top 10 MLB records in IP and Wins." },
+          "answer":   { "type": "image-text", "image": "images/League Of Legends 100 Answer.jpg", "content": "Who is Grover Cleveland Alexander?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "text", "content": "If you have a foot fetish, enjoy sexting cheerleaders, or like MILFs, you may want to play for this very sad team." },
+          "answer":   { "type": "image-text", "image": "images/League Of Legends 200 Answer.png", "content": "What is the New York Jets?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "text", "content": "'And I took that personally'" },
+          "answer":   { "type": "image-text", "image": "images/League Of Legends 300 Answer.png", "content": "Who is Michael Jordan?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "text", "content": "This 1994 hot prospect had a stellar Mendoza line BA in his play with the AA Birmingham Barons." },
+          "answer":   { "type": "image-text", "image": "images/League Of Legends 400 Answer.jpg", "content": "Who is Michael Jordan?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "image", "content": "images/League Of Legends 500 Question.png"},
+          "answer":   { "type": "image", "content": "images/League Of Legends 500 Answer.jpg" }
+        }
+      ]
+    },
+    {
+      "name": "Anyway, here's Wonderwall",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "image-text", "image": "images/Wonderwall 100 Question.png", "content": "The name of this world famous classic band" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 100 Answer.png", "content": "What is The Beatles?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "image-text", "image": "images/Wonderwall 200 Question.png", "content": "The name of this high flying British rock band" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 200 Answer.png.jpg", "content": "What is Led Zeppelin?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "image-text", "image": "images/Wonderwall 300 Question.png", "content": "This contemporary Canadian artist surprised the world with his charming dark R&B sound" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 300 Answer.png.jpg", "content": "What is The Weeknd?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "image-text", "image": "images/Wonderwall 400 Question.png", "content": "This band's iconic 'four guys standing in front of a color' album art was parodied in Ultrakill amongst many other places" },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 400 Answer.png", "content": "Who is Weezer?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "text", "content": "This 'inn' in Greenwich Village was the site of the 1969 riots that are often credited as the beginning of the gay rights movement in America." },
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 500 Answer.png", "content": "What is Stonewall" }
+        }
+      ]
+    }
+  ]
+}
