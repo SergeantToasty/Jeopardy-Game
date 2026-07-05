@@ -36,22 +36,22 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "text", "content": "This fairly forgettable one term U.S. president ascended after the assassination of James Garfield and oversaw the rebirth of the U.S. Navy." },
+          "question": { "type": "text", "content": "This Country owns a small island referenced in Geoguesser 400: Napoleon's vacation spot." },
           "answer":   { "type": "image-text", "image": "images/Connect 5 100 Answer.jpg", "content": "What is Italy?" }
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "This beautiful city is one of the westernmost cities in Brittany, and features a rich maritime history." },
+          "question": { "type": "text", "content": "This Country was the birthplace of the famous author referenced in Story Time 100: Author of Pulmonary Circulation." },
           "answer":   { "type": "image-text", "image": "images/Connect 5 200 Answer.jpg", "content": "What is Spain?" }
         },
         {
           "value": 300,
-          "question": { "type": "text", "content": "This treaty was a separate peace between the central and Soviet powers in 1918 that effectively ended the eastern front of World War I." },
+          "question": { "type": "text", "content": "This Country was the winning signatory of the separate peace referenced in Chest Positions 300: Treaties of World War I." },
           "answer":   { "type": "image-text", "image": "images/Connect 5 300 Answer.png", "content": "What is Germany?" }
         },
         {
           "value": 400,
-          "question": { "type": "text", "content": "This highly decorated Marine Lieutenant General served in the Banana Wars, World War II, and the Korean War." },
+          "question": { "type": "text", "content": "This Country was the home of the beautiful maritime city referenced in Chest Positions 200: Brittany Cities." },
           "answer":   { "type": "image-text", "image": "images/Connect 5 400 Answer.jpg", "content": "What is France?" }
         },
         {
@@ -127,22 +127,22 @@
         {
           "value": 100,
           "question": { "type": "text", "content": "This presidentially named Hall of Fame pitcher holds top 10 MLB records in IP and Wins." },
-          "answer":   { "type": "image-text", "image": "images/League Of Legends 100 Answer.jpg", "content": "Who is Grover Cleveland Alexander?" }
+          "answer":   { "type": "image-text", "image": "images/Ornithology 100 Answer.jpg", "content": "What is the Penguin?" }
         },
         {
           "value": 200,
           "question": { "type": "text", "content": "If you have a foot fetish, enjoy sexting cheerleaders, or like MILFs, you may want to play for this very sad team." },
-          "answer":   { "type": "image-text", "image": "images/League Of Legends 200 Answer.png", "content": "What is the New York Jets?" }
+          "answer":   { "type": "image-text", "image": "images/Ornithology 200 Answer.png", "content": "What is Birdman?" }
         },
         {
           "value": 300,
           "question": { "type": "text", "content": "'And I took that personally'" },
-          "answer":   { "type": "image-text", "image": "images/League Of Legends 300 Answer.png", "content": "Who is Michael Jordan?" }
+          "answer":   { "type": "image-text", "image": "images/Ornithology 300 Answer.png", "content": "Who is Harvey Birdman?" }
         },
         {
           "value": 400,
           "question": { "type": "text", "content": "This 1994 hot prospect had a stellar Mendoza line BA in his play with the AA Birmingham Barons." },
-          "answer":   { "type": "image-text", "image": "images/League Of Legends 400 Answer.jpg", "content": "Who is Michael Jordan?" }
+          "answer":   { "type": "image-text", "image": "images/Ornithology 400 Answer.jpg", "content": "Who is the Vulture?" }
         },
         {
           "value": 500,
