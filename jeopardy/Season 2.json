@@ -27,7 +27,7 @@
         {
           "value": 500,
           "question": { "type": "text", "content": "Ahhhhhhhhhhh, the French champagne has always been celebrated for its excellence." },
-          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=EMK4wsGLEy0" }
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=1A_CmxK8I8M" }
         }
       ]
     },
@@ -172,7 +172,7 @@
         {
           "value": 400,
           "question": { "type": "image-text", "image": "images/Wonderwall 400 Question.jpg", "content": "This band's iconic 'four guys standing in front of a color' album art was parodied in Ultrakill amongst many other places" },
-          "answer":   { "type": "image-text", "image": "images/Wonderwall 400 Answer.png", "content": "Who is Weezer?" }
+          "answer":   { "type": "image-text", "image": "images/Wonderwall 400 Answer.jpg", "content": "Who is Weezer?" }
         },
         {
           "value": 500,
