@@ -62,12 +62,12 @@
       ]
     },
     {
-      "name": "Jane Air",
+      "name": "Title Drop",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Jane Air 100 Question.jpg", "content": "While Grigori Mendeleev is recognized on the periodic table with Mendeleevium (101), he has a far more important contribution visible in this image" },
-          "answer":   { "type": "image-text", "image": "images/Jane Air 100 Answer.jpg", "content": "What is he invented a form of the Periodic Table?" }
+          "question": { "type": "text", "content": "True or False, The phrase 'Dark Soul' is spoken at some point in a Dark Souls game" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=Nt5Q9hu0h0s" }
         },
         {
           "value": 200,
