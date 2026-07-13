@@ -152,7 +152,7 @@
       ]
     },
     {
-      "name": "Anyway, here's Wonderwall",
+      "name": "The Male Fantasy",
       "questions": [
         {
           "value": 100,
@@ -171,8 +171,8 @@
         },
         {
           "value": 400,
-          "question": { "type": "image-text", "image": "images/Wonderwall 400 Question.png", "content": "This band's iconic 'four guys standing in front of a color' album art was parodied in Ultrakill amongst many other places" },
-          "answer":   { "type": "image-text", "image": "images/Wonderwall 400 Answer.png", "content": "Who is Weezer?" }
+          "question": { "type": "image-text", "image": "images/Fantasy 3 400 Question.png", "content": "Complete this classic Simpsons quote:" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=kthOJJT93IY" }
         },
         {
           "value": 500,
