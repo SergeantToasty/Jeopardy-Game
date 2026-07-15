@@ -16,7 +16,7 @@
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Family Guy 100 Question.jpg", "content": "The name of this video" },
+          "question": { "type": "image-text", "image": "images/Family Guy 300 Question.jpg", "content": "The name of this video" },
           "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=hMQLvfP3T1w" }
         },
         {
