@@ -62,32 +62,32 @@
       ]
     },
     {
-      "name": "Title Drop",
+      "name": "Daily Double",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "text", "content": "True or False, The phrase 'Dark Soul' is spoken at some point in a Dark Souls game" },
-          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=Nt5Q9hu0h0s" }
+          "question": { "type": "text", "content": "'Double, double toil and trouble, Fire burn and caldron bubble' is an oft quoted witchy aphorism from this wicked stageplay" },
+          "answer":   { "type": "text", "content": "What is Macbeth?" }
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "The band famous for a song about a month infamously clearly never watched Avatar since they forgot to include this element in their band name" },
-          "answer":   { "type": "text", "content": "What is Water?" }
+          "question": { "type": "text", "content": "'Prepare for trouble!  And make it double!  To protect the world from devastation!  To unite all peoples within our nation!' is the oddly wholesome motto of this antagonistic Team" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 200 Answer.jpg", "content": "What is Team Rocket?"  }
         },
         {
           "value": 300,
-          "question": { "type": "text", "content": "This season/series of Yugioh introduced the Elemental series of monster cards" },
-          "answer":   { "type": "image-text", "image": "images/Jane Air 300 Answer.jpg", "content": "What is Yugioh GX?" }
+          "question": { "type": "text", "content": "This Trini street food, commonly eaten for breakfast, consists of curried chickpeas  served on two fried flatbreads" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 300 Answer.jpg", "content": "What is Doubles?" }
         },
         {
           "value": 400,
-          "question": { "type": "text", "content": "Despite being his most famous catchphrase, Sherlock Holmes never actually says this line in any Arthur Conan Doyle book" },
-          "answer":   { "type": "text", "content": "What is 'Elementary, my dear Watson'?" }
+          "question": { "type": "text", "content": "This Berliner Weisse based on 'Daily Serving' offered by Trillium is motivated by a desire to amplify the mouthfeel, fruit addition, and ABV" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 400 Answer.jpg", "content": "What is Twice the Daily Serving?"}
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "The ever hated Mr. Brocklehurst may be a villain, but he is a hard worker, holding these three jobs at Lowood" },
-          "answer":   { "type": "text", "content": "What is Clergy, Director, and Treasurer?" }
+          "question": { "type": "text", "content": "McDonalds Daily Double is a classic menu item featuring two of many things, but only one of this" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 500 Answer.jpg", "content": "What is a slice of cheese?"}
         }
       ]
     },
@@ -156,13 +156,13 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Wonderwall 100 Question.png", "content": "The name of this world famous classic band" },
-          "answer":   { "type": "image-text", "image": "images/Wonderwall 100 Answer.png", "content": "What is The Beatles?" }
+          "question": { "type": "image-text", "image": "images/Fantasy3 100 Question.png", "content": "The red carpet is a goal for many a movie star.  Name any of the movie stars pictured here" },
+          "answer":   { "type": "image-text", "image": "images/Fantasy3 100 Answer.png", "content": "You know I haven't heard of them.  Where have you seen them?" }
         },
         {
           "value": 200,
-          "question": { "type": "image-text", "image": "images/Wonderwall 200 Question.png", "content": "The name of this high flying British rock band" },
-          "answer":   { "type": "image-text", "image": "images/Wonderwall 200 Answer.png.jpg", "content": "What is Led Zeppelin?" }
+          "question": { "type": "image-text", "image": "images/Fantasy3 200 Question.png", "content": "This bald actor is famous for having every job, but in real life has worked as a paper boy, mechanic, motorcycle sales, steel laborer, and hearse driver" },
+          "answer":   { "type": "image-text", "image": "images/Fantasy3 200 Answer.png.jpg", "content": "Who is Johnny Sins?" }
         },
         {
           "value": 300,
@@ -171,13 +171,13 @@
         },
         {
           "value": 400,
-          "question": { "type": "image-text", "image": "images/Fantasy 3 400 Question.png", "content": "Complete this classic Simpsons quote:" },
+          "question": { "type": "image-text", "image": "images/Fantasy3 400 Question.png", "content": "Complete this classic Simpsons quote:" },
           "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=kthOJJT93IY" }
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "This 'inn' in Greenwich Village was the site of the 1969 riots that are often credited as the beginning of the gay rights movement in America." },
-          "answer":   { "type": "image-text", "image": "images/Wonderwall 500 Answer.png", "content": "What is Stonewall" }
+          "question": { "type": "text", "content": "'I wrote a blog post a while ago about why fucking hate video games, because this is what it does it appeals to like ____________'." },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=Q6pewZ6LWro" }
         }
       ]
     }
