@@ -47,7 +47,7 @@
         {
           "value": 300,
           "question": { "type": "text", "content": "This videogame franchise founded in 2007 features games set everywhere except on solid ground." },
-          "answer":   { "type": "image-text", "image": "images/AP Bio 300 Answer.png", "content": "What is Bioshock?" }
+          "answer":   { "type": "image-text", "image": "images/AP Bio 300 Answer.jpg", "content": "What is Bioshock?" }
         },
         {
           "value": 400,
@@ -56,8 +56,8 @@
         },
         {
           "value": 500,
-          "question": { "type": "image-text", "image": "images/AP Bio 500 Question.png", "content": "Describe one of the three structural components of a nucleotide."},
-          "answer":   { "type": "image-text", "image": "images/AP Bio 500 Answer.png", "content": "What is a nucleobase, a five-carbon sugar (ribose or deoxyribose), and a phosphate group."}
+          "question": { "type": "image-text", "image": "images/AP Bio 500 Question.jpg", "content": "Describe one of the three structural components of a nucleotide."},
+          "answer":   { "type": "image-text", "image": "images/AP Bio 500 Answer.jpg", "content": "What is a nucleobase, a five-carbon sugar (ribose or deoxyribose), and a phosphate group."}
         }
       ]
     },
@@ -156,8 +156,8 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Fantasy3 100 Question.png", "content": "The red carpet is a goal for many a movie star.  Name any of the movie stars pictured here" },
-          "answer":   { "type": "image-text", "image": "images/Fantasy3 100 Answer.png", "content": "You know I haven't heard of them.  Where have you seen them?" }
+          "question": { "type": "image-text", "image": "images/Fantasy3 100 Question.jpg", "content": "The red carpet is a goal for many a movie star.  Name any of the movie stars pictured here" },
+          "answer":   { "type": "image-text", "image": "images/Fantasy3 100 Answer.jpg", "content": "You know I haven't heard of them.  Where have you seen them?" }
         },
         {
           "value": 200,
