@@ -405,6 +405,8 @@
       letter-spacing: 0.04em;
       transition: background 0.12s, color 0.12s;
     }
+    .ctrl-btn-add { border-color: #55cc55; color: #55cc55; background: transparent; }
+    .ctrl-btn-add:hover { background: #55cc55; color: #000; }
     .ctrl-btn-reset { border-color: #FFD700; color: #FFD700; background: transparent; }
     .ctrl-btn-reset:hover { background: #FFD700; color: #060CE9; }
     .ctrl-btn-close { border-color: #ff5555; color: #ff5555; background: transparent; }
@@ -519,6 +521,7 @@
     <div id="board-grid"></div>
     <div id="scoreboard"></div>
     <div id="game-controls">
+      <button class="ctrl-btn ctrl-btn-add" onclick="addPlayer()">Add Player</button>
       <button class="ctrl-btn ctrl-btn-reset" onclick="confirmAction('Reset the game? Scores and progress will be cleared.', resetGame)">Reset Game</button>
       <button class="ctrl-btn ctrl-btn-close" onclick="confirmAction('Close the game and return to setup?', closeGame)">Close Game</button>
     </div>
@@ -873,6 +876,11 @@
       document.getElementById('confirm-overlay').classList.remove('visible');
       confirmCallback = null;
     };
+
+    function addPlayer() {
+      players.push({ name: `Player ${players.length + 1}`, score: 0 });
+      renderScoreboard();
+    }
 
     function resetGame() {
       usedTiles.clear();
