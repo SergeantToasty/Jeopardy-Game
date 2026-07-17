@@ -92,32 +92,32 @@
       ]
     },
     {
-      "name": "Famous Female Novelists",
+      "name": "The Female Fantasy",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image", "content": "images/Famous Female Novelists 100 Question.jpg" },
-          "answer":   { "type": "text", "content": "Who is The Bronte Sisters?" }
+          "question": { "type": "image-text", "image": "images/Female Fantasy 100 Question.jpg", "content": "This planet was represented in the Galactic Senate by Padme Amidala Naberrie during the fall of the Galactic Republic" },
+          "answer":   { "type": "text", "content": "What is Naboo?" }
         },
         {
           "value": 200,
-          "question": { "type": "image", "content": "images/Famous Female Novelists 200 Question.jpg" },
-          "answer":   { "type": "text", "content": "Who is Jane Austen?" }
+          "question": { "type": "image-text", "image": "images/Female Fantasy 200 Question.jpg", "content": "A polyglot, translator, and communications officer, this character was not only a deep space pioneer, but a pioneer of black visibility in American Television" },
+          "answer":   { "type": "text", "content": "Who is Lt. Nyota Uhura?" }
         },
         {
           "value": 300,
-          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=EMK4wsGLEy0" },
-          "answer":   { "type": "text", "content": "Who is Emily Dickinson?" }
+          "question": { "type": "image-text", "image": "images/Female Fantasy 300 Question.jpg", "content": "Glorfindel's Prophecy is finally resolved by this woman with a little help from a little person" },
+          "answer":   { "type": "text", "content": "Who is Éowyn?" }
         },
         {
           "value": 400,
-          "question": { "type": "image", "content": "images/Famous Female Novelists 400 Question.jpg" },
-          "answer":   { "type": "text", "content": "Who is Toni Morrison?" }
+          "question": { "type": "image-text", "image": "images/Female Fantasy 400 Question.jpg", "content": "This queen shares a name with one mythical greek, but perhaps should be known as Medea given what keeps happening to her children" },
+          "answer":   { "type": "text", "content": "Who is Cersei Lannister?" }
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "This famous 20th century novelist was so insecure about his wife's comments on the size of his penis that he showed it to Ernest Hemmingway to get an opinion." },
-          "answer":   { "type": "image-text", "image": "images/Famous Female Novelists 500 Answer.jpg", "content": "Who is F. Scott Fitzgerald?" }
+          "question": { "type": "image-text", "image": "images/Female Fantasy 500 Question.jpg", "content": "Hwæt!  While Grendel lies dead at Beowulf's hands, this character plots her vengeance against the people of Heorot." },
+          "answer":   { "type": "text", "content": "Who is Grendel's Mother?" }
         }
       ]
     },
@@ -146,8 +146,8 @@
         },
         {
           "value": 500,
-          "question": { "type": "image", "content": "images/League Of Legends 500 Question.png"},
-          "answer":   { "type": "image", "content": "images/League Of Legends 500 Answer.jpg" }
+          "question": { "type": "image-text", "image": "images/Ornithology3 500 Question.jpg", "content": "This rather diminutive bird, Ardea atricapilla, inhabits most of Africa and southeast asia and has more than twenty subspecies"},
+          "answer":   { "type": "text", "content": "What is The Little Heron?" }
         }
       ]
     },
