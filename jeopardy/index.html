@@ -313,11 +313,19 @@
     /* ── Question / Answer screens ─────────────────────────────── */
     #question-screen,
     #answer-screen {
+      background: #060CE9;
+    }
+
+    .qa-inner {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
       padding: 32px 48px 28px;
-      background: #060CE9;
       text-align: center;
+      overflow: hidden;
     }
 
     .qa-value {
@@ -516,10 +524,12 @@
     </div>
   </div>
 
+  <!-- Scoreboard (shared, reparented into whichever game screen is active) -->
+  <div id="scoreboard" style="display:none;"></div>
+
   <!-- Board -->
   <div id="board-screen" class="screen" style="position:relative;">
     <div id="board-grid"></div>
-    <div id="scoreboard"></div>
     <div id="game-controls">
       <button class="ctrl-btn ctrl-btn-add" onclick="addPlayer()">Add Player</button>
       <button class="ctrl-btn ctrl-btn-reset" onclick="confirmAction('Reset the game? Scores and progress will be cleared.', resetGame)">Reset Game</button>
@@ -529,16 +539,20 @@
 
   <!-- Question -->
   <div id="question-screen" class="screen">
-    <div class="qa-value" id="q-value"></div>
-    <div class="qa-content" id="q-content"></div>
-    <div class="qa-hint">Spacebar &rarr; Reveal Answer &nbsp;|&nbsp; Escape &rarr; Back to Board</div>
+    <div class="qa-inner">
+      <div class="qa-value" id="q-value"></div>
+      <div class="qa-content" id="q-content"></div>
+      <div class="qa-hint">Spacebar &rarr; Reveal Answer &nbsp;|&nbsp; Escape &rarr; Back to Board</div>
+    </div>
   </div>
 
   <!-- Answer -->
   <div id="answer-screen" class="screen">
-    <div class="qa-value" id="a-value"></div>
-    <div class="qa-content" id="a-content"></div>
-    <div class="qa-hint">Escape &rarr; Return to Board</div>
+    <div class="qa-inner">
+      <div class="qa-value" id="a-value"></div>
+      <div class="qa-content" id="a-content"></div>
+      <div class="qa-hint">Escape &rarr; Return to Board</div>
+    </div>
   </div>
 
   <script>
@@ -551,10 +565,21 @@
     let activeScreen = null;
 
     // ── Screen helper ────────────────────────────────────────────
+    const SCOREBOARD_SCREENS = ['board-screen', 'question-screen', 'answer-screen'];
+
     function showScreen(id) {
       document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+      const target = document.getElementById(id);
+      target.classList.add('active');
       activeScreen = id;
+
+      const sb = document.getElementById('scoreboard');
+      if (SCOREBOARD_SCREENS.includes(id)) {
+        target.appendChild(sb); // reparent (preserves listeners/values), then show
+        sb.style.display = 'flex';
+      } else {
+        sb.style.display = 'none';
+      }
     }
 
     // ── Init ─────────────────────────────────────────────────────
