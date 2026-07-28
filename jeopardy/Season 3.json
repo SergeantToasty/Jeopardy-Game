@@ -11,7 +11,7 @@
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "This is the first thing Stan from American Dad does in the title sequence." },
+          "question": { "type": "text", "content": "This is the first thing Stan from American Dad does in the title sequence of said show." },
           "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=m7PfevaOLp0" }
         },
         {
@@ -42,7 +42,7 @@
         {
           "value": 200,
           "question": { "type": "text", "content": "This Montreal based landmark built in 1976 now serves to educate visitors about American ecosystems including the St. Lawrence Gulf." },
-          "answer":   { "type": "image-text", "image": "images/AP Bio 200 Answer.jpg", "content": "What is the Biodome?" }
+          "answer":   { "type": "image-text", "image": "images/AP Bio 200 Answer.jpg", "content": "What is The Biodome?" }
         },
         {
           "value": 300,
@@ -77,7 +77,7 @@
         {
           "value": 300,
           "question": { "type": "text", "content": "This Trini street food, commonly eaten for breakfast, consists of curried chickpeas  served on two fried flatbreads" },
-          "answer":   { "type": "image-text", "image": "images/Daily Double 300 Answer.jpg", "content": "What is Doubles?" }
+          "answer":   { "type": "image-text", "image": "images/Daily Double 300 Answer.jpg", "content": "What are Doubles?" }
         },
         {
           "value": 400,
@@ -156,8 +156,8 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Fantasy3 100 Question.jpg", "content": "The red carpet is a goal for many a movie star.  Name any of the movie stars pictured here" },
-          "answer":   { "type": "image-text", "image": "images/Fantasy3 100 Answer.jpg", "content": "You know I haven't heard of them.  Where have you seen them?" }
+          "question": { "type": "image-text", "image": "images/Fantasy3 100 Question.jpg", "content": "The red carpet is a goal for many a movie star.  However, I can't seem to remember these actress' names.  Name any of the movie stars pictured here" },
+          "answer":   { "type": "image-text", "image": "images/Fantasy3 100 Answer.jpg", "content": "Thanks, you know I haven't heard of them.  Where have you seen them?" }
         },
         {
           "value": 200,
@@ -176,7 +176,7 @@
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "'I wrote a blog post a while ago about why fucking hate video games, because this is what it does it appeals to like ____________'." },
+          "question": { "type": "text", "content": "Complete the quote: 'I wrote a blog post a while ago about why fucking hate video games, because this is what it does it appeals to like ____________'." },
           "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=Q6pewZ6LWro" }
         }
       ]
