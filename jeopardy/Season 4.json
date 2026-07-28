@@ -1,1 +1,185 @@
-
+{
+  "title": "Very Fair and Balanced Jeopardy: Season 4",
+  "categories": [
+    {
+      "name": "Family Guy Clips on Youtube",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=j7_gPoWOGdg" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=q7Hyfw0lvr8" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "text", "content": "This is the first thing Stan from American Dad does in the title sequence of said show." },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=m7PfevaOLp0" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "image-text", "image": "images/Family Guy 300 Question.jpg", "content": "The name of this video" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=hMQLvfP3T1w" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "text", "content": "This many shots of Vodka is appropriate for a daytime mixed drink" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=csn2CIWPVbM" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=aVab1ERvdEM" },
+          "answer":   { "type": "text", "content": "What is, please god, please turn it off." }
+        }
+      ]
+    },
+    {
+      "name": "AP Bio",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "text", "content": "This Montreal based landmark built in 1967 now serves to educate visitors about the water ecosystems of the Great Lakes and St. Lawrence River." },
+          "answer":   { "type": "image-text", "image": "images/AP Bio 100 Answer.jpg", "content": "What is The Bioshpere?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "text", "content": "This Montreal based landmark built in 1976 now serves to educate visitors about American ecosystems including the St. Lawrence Gulf." },
+          "answer":   { "type": "image-text", "image": "images/AP Bio 200 Answer.jpg", "content": "What is The Biodome?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "text", "content": "This videogame franchise founded in 2007 features games set everywhere except on solid ground." },
+          "answer":   { "type": "image-text", "image": "images/AP Bio 300 Answer.jpg", "content": "What is Bioshock?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "text", "content": "Saint Augustine's 'Confessions' (c. 400) is considered one of the first examples of this genre in the western cannon." },
+          "answer":   { "type": "image-text", "image": "images/AP Bio 400 Answer.jpg", "content": "What is Autobiography?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "image-text", "image": "images/AP Bio 500 Question.jpg", "content": "Describe one of the three structural components of a nucleotide."},
+          "answer":   { "type": "image-text", "image": "images/AP Bio 500 Answer.jpg", "content": "What is a nucleobase, a five-carbon sugar (ribose or deoxyribose), and a phosphate group."}
+        }
+      ]
+    },
+    {
+      "name": "Daily Double",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "text", "content": "'Double, double toil and trouble, Fire burn and caldron bubble' is an oft quoted witchy aphorism from this wicked stageplay" },
+          "answer":   { "type": "text", "content": "What is Macbeth?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "text", "content": "'Prepare for trouble!  And make it double!  To protect the world from devastation!  To unite all peoples within our nation!' is the oddly wholesome motto of this antagonistic Team" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 200 Answer.jpg", "content": "What is Team Rocket?"  }
+        },
+        {
+          "value": 300,
+          "question": { "type": "text", "content": "This Trini street food, commonly eaten for breakfast, consists of curried chickpeas  served on two fried flatbreads" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 300 Answer.jpg", "content": "What are Doubles?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "text", "content": "This Berliner Weisse based on 'Daily Serving' offered by Trillium is motivated by a desire to amplify the mouthfeel, fruit addition, and ABV" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 400 Answer.jpg", "content": "What is Twice the Daily Serving?"}
+        },
+        {
+          "value": 500,
+          "question": { "type": "text", "content": "McDonalds Daily Double is a classic menu item featuring two of many things, but only one of this" },
+          "answer":   { "type": "image-text", "image": "images/Daily Double 500 Answer.jpg", "content": "What is a slice of cheese?"}
+        }
+      ]
+    },
+    {
+      "name": "The Female Fantasy",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "image-text", "image": "images/Female Fantasy 100 Question.jpg", "content": "This planet was represented in the Galactic Senate by Padme Amidala Naberrie during the fall of the Galactic Republic" },
+          "answer":   { "type": "text", "content": "What is Naboo?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "image-text", "image": "images/Female Fantasy 200 Question.jpg", "content": "A polyglot, translator, and communications officer, this character was not only a deep space pioneer, but a pioneer of black visibility in American Television" },
+          "answer":   { "type": "text", "content": "Who is Lt. Nyota Uhura?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "image-text", "image": "images/Female Fantasy 300 Question.jpg", "content": "Glorfindel's Prophecy is finally resolved by this woman with a little help from a little person" },
+          "answer":   { "type": "text", "content": "Who is Éowyn?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "image-text", "image": "images/Female Fantasy 400 Question.jpg", "content": "This queen shares a name with one mythical greek, but perhaps should be known as Medea given what keeps happening to her children" },
+          "answer":   { "type": "text", "content": "Who is Cersei Lannister?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "image-text", "image": "images/Female Fantasy 500 Question.jpg", "content": "Hwæt!  While Grendel lies dead at Beowulf's hands, this character plots her vengeance against the people of Heorot." },
+          "answer":   { "type": "text", "content": "Who is Grendel's Mother?" }
+        }
+      ]
+    },
+    {
+      "name": "Ornithology",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "image-text", "image": "images/Ornithology3 100 Question.jpg", "content": "This European city features a gorgeous large palatial pond in the midst of its large public park" },
+          "answer":   { "type": "text", "content": "What is Madrid?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "image-text", "image": "images/Ornithology3 200 Question.jpg", "content": "This castle in southern Germany is a UNESCO world heritage site, as well as the tallest castle in the world" },
+          "answer":   { "type": "text", "content": "What is Neuschwanstein Castle?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "image-text", "image": "images/Ornithology3 300 Question.jpg", "content": "This pier in soutern California features a ferris wheel, an arcade, and is the western terminus of Route 66" },
+          "answer":   { "type": "text", "content": "What is The Santa Monica Pier?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "image-text", "image": "images/Ornithology3 400 Question.jpg", "content": "This country features animals that just walk straight up to you, I swear bro it's so weird" },
+          "answer":   { "type": "image-text", "image": "images/Ornithology3 400 Answer.jpg", "content": "What is Japan?" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "image-text", "image": "images/Ornithology3 500 Question.jpg", "content": "This rather diminutive bird, Ardea atricapilla, inhabits most of Africa and southeast asia and has more than twenty subspecies"},
+          "answer":   { "type": "text", "content": "What is The Little Heron?" }
+        }
+      ]
+    },
+    {
+      "name": "The Male Fantasy",
+      "questions": [
+        {
+          "value": 100,
+          "question": { "type": "image-text", "image": "images/Fantasy3 100 Question.jpg", "content": "The red carpet is a goal for many a movie star.  However, I can't seem to remember these actress' names.  Name any of the movie stars pictured here" },
+          "answer":   { "type": "image-text", "image": "images/Fantasy3 100 Answer.jpg", "content": "Thanks, you know I haven't heard of them.  Where have you seen them?" }
+        },
+        {
+          "value": 200,
+          "question": { "type": "image-text", "image": "images/Fantasy3 200 Question.png", "content": "This bald actor is famous for having every job, but in real life has worked as a paper boy, mechanic, motorcycle sales, steel laborer, and hearse driver" },
+          "answer":   { "type": "image-text", "image": "images/Fantasy3 200 Answer.png.jpg", "content": "Who is Johnny Sins?" }
+        },
+        {
+          "value": 300,
+          "question": { "type": "text", "content": "The video on Pornhub titled: 'Young Brazilians get F**ked by entire German Soccer Team' depicts this historical event" },
+          "answer":   { "type": "image-text", "image": "images/Fantasy3 300 Answer.jpg", "content": "What is The 2014 World Cup Semifinal Game?" }
+        },
+        {
+          "value": 400,
+          "question": { "type": "image-text", "image": "images/Fantasy3 400 Question.png", "content": "Complete this classic Simpsons quote:" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=kthOJJT93IY" }
+        },
+        {
+          "value": 500,
+          "question": { "type": "text", "content": "Complete the quote: 'I wrote a blog post a while ago about why fucking hate video games, because this is what it does it appeals to like ____________'." },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=Q6pewZ6LWro" }
+        }
+      ]
+    }
+  ]
+}
