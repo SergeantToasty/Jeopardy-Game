@@ -392,6 +392,16 @@
       flex-shrink: 0;
     }
 
+    /* ── Daily Double / Final Jeopardy announcement ───────────────── */
+    .announce-text {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      color: #FFD700;
+      font-weight: 900;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
     /* ── Game controls ─────────────────────────────────────────── */
     #game-controls {
       position: absolute;
@@ -415,6 +425,14 @@
     }
     .ctrl-btn-add { border-color: #55cc55; color: #55cc55; background: transparent; }
     .ctrl-btn-add:hover { background: #55cc55; color: #000; }
+    .ctrl-btn-final { border-color: #40c4ff; color: #40c4ff; background: transparent; }
+    .ctrl-btn-final:hover { background: #40c4ff; color: #060CE9; }
+    .ctrl-btn-final.disabled {
+      border-color: rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.25);
+      cursor: default;
+      pointer-events: none;
+    }
     .ctrl-btn-reset { border-color: #FFD700; color: #FFD700; background: transparent; }
     .ctrl-btn-reset:hover { background: #FFD700; color: #060CE9; }
     .ctrl-btn-close { border-color: #ff5555; color: #ff5555; background: transparent; }
@@ -532,8 +550,17 @@
     <div id="board-grid"></div>
     <div id="game-controls">
       <button class="ctrl-btn ctrl-btn-add" onclick="addPlayer()">Add Player</button>
+      <button class="ctrl-btn ctrl-btn-final" id="final-jeopardy-btn" onclick="openFinalJeopardy()">Final Jeopardy</button>
       <button class="ctrl-btn ctrl-btn-reset" onclick="confirmAction('Reset the game? Scores and progress will be cleared.', resetGame)">Reset Game</button>
       <button class="ctrl-btn ctrl-btn-close" onclick="confirmAction('Close the game and return to setup?', closeGame)">Close Game</button>
+    </div>
+  </div>
+
+  <!-- Daily Double announcement -->
+  <div id="daily-double-screen" class="screen">
+    <div class="qa-inner">
+      <div class="qa-content"><div class="announce-text">Daily Double!</div></div>
+      <div class="qa-hint">Spacebar &rarr; Continue</div>
     </div>
   </div>
 
@@ -555,6 +582,33 @@
     </div>
   </div>
 
+  <!-- Final Jeopardy: Topic -->
+  <div id="final-jeopardy-topic-screen" class="screen">
+    <div class="qa-inner">
+      <div class="qa-value">Final Jeopardy!</div>
+      <div class="qa-content" id="fj-topic-content"></div>
+      <div class="qa-hint">Spacebar &rarr; Continue</div>
+    </div>
+  </div>
+
+  <!-- Final Jeopardy: Question -->
+  <div id="final-jeopardy-question-screen" class="screen">
+    <div class="qa-inner">
+      <div class="qa-value">Final Jeopardy!</div>
+      <div class="qa-content" id="fj-question-content"></div>
+      <div class="qa-hint">Spacebar &rarr; Reveal Answer &nbsp;|&nbsp; Escape &rarr; Back to Board</div>
+    </div>
+  </div>
+
+  <!-- Final Jeopardy: Answer -->
+  <div id="final-jeopardy-answer-screen" class="screen">
+    <div class="qa-inner">
+      <div class="qa-value">Final Jeopardy!</div>
+      <div class="qa-content" id="fj-answer-content"></div>
+      <div class="qa-hint">Escape &rarr; Return to Board</div>
+    </div>
+  </div>
+
   <script>
     // ── State ────────────────────────────────────────────────────
     let gameData    = null;
@@ -565,7 +619,10 @@
     let activeScreen = null;
 
     // ── Screen helper ────────────────────────────────────────────
-    const SCOREBOARD_SCREENS = ['board-screen', 'question-screen', 'answer-screen'];
+    const SCOREBOARD_SCREENS = [
+      'board-screen', 'daily-double-screen', 'question-screen', 'answer-screen',
+      'final-jeopardy-topic-screen', 'final-jeopardy-question-screen', 'final-jeopardy-answer-screen',
+    ];
 
     function showScreen(id) {
       document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -585,7 +642,7 @@
     // ── Init ─────────────────────────────────────────────────────
     async function init() {
       try {
-        const res = await fetch('/api/games');
+        const res = await fetch('/api/games', { cache: 'no-store' });
         if (!res.ok) throw new Error(`Could not reach server API (HTTP ${res.status})`);
         const files = await res.json();
 
@@ -626,7 +683,7 @@
 
     async function loadGameFile(filename) {
       try {
-        const res = await fetch(filename);
+        const res = await fetch(filename, { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status} – ${res.statusText}`);
         gameData = await res.json();
         buildSetupScreen();
@@ -693,6 +750,8 @@
 
     // ── Board ────────────────────────────────────────────────────
     function renderBoard() {
+      updateFinalJeopardyButton();
+
       const grid = document.getElementById('board-grid');
       grid.innerHTML = '';
 
@@ -725,6 +784,16 @@
       currentTile = { catIdx, rowIdx };
       lastValue   = q.value;
 
+      if (q.dailyDouble) {
+        showScreen('daily-double-screen');
+      } else {
+        renderQuestionScreen();
+      }
+    }
+
+    function renderQuestionScreen() {
+      const q = gameData.categories[currentTile.catIdx].questions[currentTile.rowIdx];
+
       document.getElementById('q-value').textContent = `$${q.value}`;
       const qc = document.getElementById('q-content');
       qc.innerHTML = '';
@@ -752,10 +821,43 @@
         currentTile = null;
       }
       // Stop any embedded media
-      document.getElementById('q-content').innerHTML = '';
-      document.getElementById('a-content').innerHTML = '';
+      ['q-content', 'a-content', 'fj-topic-content', 'fj-question-content', 'fj-answer-content']
+        .forEach(id => { document.getElementById(id).innerHTML = ''; });
       renderBoard();
       showScreen('board-screen');
+    }
+
+    // ── Final Jeopardy ───────────────────────────────────────────
+    function updateFinalJeopardyButton() {
+      const btn = document.getElementById('final-jeopardy-btn');
+      btn.classList.toggle('disabled', !(gameData && gameData.finalJeopardy));
+    }
+
+    function openFinalJeopardy() {
+      if (!gameData || !gameData.finalJeopardy) return;
+      renderFinalTopic();
+    }
+
+    function renderFinalTopic() {
+      const tc = document.getElementById('fj-topic-content');
+      tc.innerHTML = '';
+      tc.appendChild(renderContent(gameData.finalJeopardy.topic));
+      renderScoreboard();
+      showScreen('final-jeopardy-topic-screen');
+    }
+
+    function renderFinalQuestion() {
+      const qc = document.getElementById('fj-question-content');
+      qc.innerHTML = '';
+      qc.appendChild(renderContent(gameData.finalJeopardy.question));
+      showScreen('final-jeopardy-question-screen');
+    }
+
+    function renderFinalAnswer() {
+      const ac = document.getElementById('fj-answer-content');
+      ac.innerHTML = '';
+      ac.appendChild(renderContent(gameData.finalJeopardy.answer));
+      showScreen('final-jeopardy-answer-screen');
     }
 
     // ── Content renderer ─────────────────────────────────────────
@@ -867,7 +969,14 @@
 
     // ── Keyboard ─────────────────────────────────────────────────
     document.addEventListener('keydown', e => {
-      if (activeScreen === 'question-screen') {
+      if (activeScreen === 'daily-double-screen') {
+        if (e.code === 'Space') {
+          e.preventDefault();
+          renderQuestionScreen();
+        } else if (e.code === 'Escape') {
+          returnToBoard();
+        }
+      } else if (activeScreen === 'question-screen') {
         if (e.code === 'Space') {
           e.preventDefault();
           revealAnswer();
@@ -875,6 +984,24 @@
           returnToBoard();
         }
       } else if (activeScreen === 'answer-screen') {
+        if (e.code === 'Escape') {
+          returnToBoard();
+        }
+      } else if (activeScreen === 'final-jeopardy-topic-screen') {
+        if (e.code === 'Space') {
+          e.preventDefault();
+          renderFinalQuestion();
+        } else if (e.code === 'Escape') {
+          returnToBoard();
+        }
+      } else if (activeScreen === 'final-jeopardy-question-screen') {
+        if (e.code === 'Space') {
+          e.preventDefault();
+          renderFinalAnswer();
+        } else if (e.code === 'Escape') {
+          returnToBoard();
+        }
+      } else if (activeScreen === 'final-jeopardy-answer-screen') {
         if (e.code === 'Escape') {
           returnToBoard();
         }
