@@ -71,7 +71,7 @@
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "The band famous for a song about a month infamously clearly never watched Avatar since they forgot to include this element in their band name" },
+          "question": { "type": "text", "content": "A band famous for a song about a month infamously clearly never watched Avatar: The Last Airbender since they forgot to include THIS element in their band name" },
           "answer":   { "type": "text", "content": "What is Water?" }
         },
         {
