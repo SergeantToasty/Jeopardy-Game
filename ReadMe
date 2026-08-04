@@ -1,6 +1,3 @@
-All three files are ready. Here's the folder structure:
-
-
 jeopardy/
 ├── index.html        ← the game
 ├── game-data.json    ← edit this to change questions
@@ -50,5 +47,6 @@ Setup screen → pick 1–8 players, name them, hit Start (or Enter)
 Board → click a tile to open it (or the "Daily Double!" screen first, if flagged)
 Question screen → Spacebar reveals the answer; Escape goes straight back without revealing
 Answer screen → Escape returns to the board and greys the tile
+Answered (greyed) tiles stay clickable — click one again to replay its question/answer sequence
 Final Jeopardy → click the button (when enabled) for the Topic → Question → Answer sequence described above
 Scoreboard → +/− buttons use the last-opened tile's value; click the score directly to type any number; names are editable inline at any time; visible on the board, question, answer, Daily Double, and Final Jeopardy screens
