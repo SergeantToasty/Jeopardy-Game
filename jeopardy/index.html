@@ -221,9 +221,8 @@
     .tile:hover { background: #1c1cf5; }
     .tile.used {
       color: #1e2066;
-      cursor: default;
-      pointer-events: none;
     }
+    .tile.used:hover { background: #10108a; }
 
     /* ── Scoreboard ────────────────────────────────────────────── */
     #scoreboard {
@@ -772,7 +771,7 @@
           const cell = document.createElement('div');
           cell.className = 'tile' + (used ? ' used' : '');
           cell.textContent = `$${q.value}`;
-          if (!used) cell.addEventListener('click', () => openQuestion(catIdx, row));
+          cell.addEventListener('click', () => openQuestion(catIdx, row));
           grid.appendChild(cell);
         });
       }
