@@ -2,37 +2,37 @@
   "title": "Very Fair and Balanced Jeopardy: Season 4",
   "categories": [
     {
-      "name": "Family Guy Clips on Youtube",
+      "name": "Saccharine",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=j7_gPoWOGdg" },
-          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=q7Hyfw0lvr8" }
+          "question": { "type": "text", "content": "Often found roasted as a street food in Japan, this orange version of a popular vegetable isn't nearly as sugary as it sounds." },
+          "answer":   { "type": "text", "content": "What is Sweet Potato?" }
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "This is the first thing Stan from American Dad does in the title sequence of said show." },
-          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=m7PfevaOLp0" }
+          "question": { "type": "text", "content": "The guards of Skyrim will often joke of this oft stolen item, despite it having very little value." },
+          "answer":   { "type": "text", "content": "What is Sweet Roll?" }
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Family Guy 300 Question.jpg", "content": "The name of this video" },
-          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=hMQLvfP3T1w" }
+          "question": { "type": "text", "content": "Nowadays we know them as 'Confections' or 'Sweets', but in ye olde England, 'Sweets' would have been referred to by this longer word." },
+          "answer":   { "type": "text", "content": "What are Sweetmeats?" }
         },
         {
           "value": 400,
-          "question": { "type": "text", "content": "This many shots of Vodka is appropriate for a daytime mixed drink" },
-          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=csn2CIWPVbM" }
+          "question": { "type": "text", "content": "Argentina tried to declare this dish of caramelized milk as an intangible cultural heritage in 2003, but were rejected due to its proliferation throughout South America" },
+          "answer":   { "type": "text", "content": "What is Dolce de Leche?" }
         },
         {
           "value": 500,
-          "question": { "type": "youtube", "content": "https://www.youtube.com/watch?v=aVab1ERvdEM" },
-          "answer":   { "type": "text", "content": "What is, please god, please turn it off." }
+          "question": { "type": "text", "content": "Some are cylindrical, some spherical, some rich, some succulent, but all Sweetbreads contain this primary ingredient" },
+          "answer":   { "type": "text", "content": "What is Thymus or Pancreas?" }
         }
       ]
     },
     {
-      "name": "AP Bio",
+      "name": "Popular Male Baby Names",
       "questions": [
         {
           "value": 100,
