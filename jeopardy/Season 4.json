@@ -66,8 +66,8 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "text", "content": "'Double, double toil and trouble, Fire burn and caldron bubble' is an oft quoted witchy aphorism from this wicked stageplay" },
-          "answer":   { "type": "text", "content": "What is Macbeth?" }
+          "question": { "type": "image-text", "image": "images/Seven Deadly 100 Question.jpg", "content": "This is what Joey Wheeler might say in such a situation" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=AUnPN385wLI" }
         },
         {
           "value": 200,
