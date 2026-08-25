@@ -66,7 +66,7 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Seven Deadly 100 Question.jpg", "content": "This is what Joey Wheeler might say in such a situation" },
+          "question": { "type": "image-text", "image": "images/Seven Deadly 100 Question.jpg", "content": "This is what Yugi Moto might say in such a situation" },
           "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=AUnPN385wLI" }
         },
         {
@@ -92,62 +92,62 @@
       ]
     },
     {
-      "name": "The Female Fantasy",
+      "name": "Famous Rap Duos",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Female Fantasy 100 Question.jpg", "content": "This planet was represented in the Galactic Senate by Padme Amidala Naberrie during the fall of the Galactic Republic" },
-          "answer":   { "type": "text", "content": "What is Naboo?" }
+          "question": { "type": "text", "content": "The East Coast–West Coast hip-hop rivalry is most often exemplified by the fatal animus between these two rappers" },
+          "answer":   { "type": "text", "content": "Who are Notorious B.I.G. and Tupac Shakur" }
         },
         {
           "value": 200,
-          "question": { "type": "image-text", "image": "images/Female Fantasy 200 Question.jpg", "content": "A polyglot, translator, and communications officer, this character was not only a deep space pioneer, but a pioneer of black visibility in American Television" },
-          "answer":   { "type": "text", "content": "Who is Lt. Nyota Uhura?" }
+          "question": { "type": "text", "content": "This '90s and '00s hip hop duo was hardly as ostracized as their name implies: helping to bring Southern hip-hop to the mainstream with tracks such as B.O.B. and Ms. Jackson" },
+          "answer":   { "type": "text", "content": "Who is Outkast?" }
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Female Fantasy 300 Question.jpg", "content": "Glorfindel's Prophecy is finally resolved by this woman with a little help from a little person" },
-          "answer":   { "type": "text", "content": "Who is Éowyn?" }
+          "question": { "type": "image-text", "image": "images/Rap Duos 300 Question.jpg", "content": "While taking a break from Interpol and Wu-Tang Clan, this duo decided to make a rock/hip-hop album for some reason" },
+          "answer":   { "type": "text", "content": "Who are Paul Banks and RZA?" }
         },
         {
           "value": 400,
-          "question": { "type": "image-text", "image": "images/Female Fantasy 400 Question.jpg", "content": "This queen shares a name with one mythical greek, but perhaps should be known as Medea given what keeps happening to her children" },
-          "answer":   { "type": "text", "content": "Who is Cersei Lannister?" }
+          "question": { "type": "text", "content": "After first meeting in 2008, Snoop Dogg famously formed a lifelong friendship and partnership with this prison hardened performer, business magnate, and Sports Illustrated Swimsuit Model in 2015" },
+          "answer":   { "type": "image-text", "image": "images/Rap Duos 400 Answer.jpg", "content": "Who is Martha Stewart?" }
         },
         {
           "value": 500,
-          "question": { "type": "image-text", "image": "images/Female Fantasy 500 Question.jpg", "content": "Hwæt!  While Grendel lies dead at Beowulf's hands, this character plots her vengeance against the people of Heorot." },
-          "answer":   { "type": "text", "content": "Who is Grendel's Mother?" }
+          "question": { "type": "text", "content": "This group of people famously went to Paris, France" },
+          "answer":   { "type": "image-text", "image": "images/Rap Duos 500 Answer.jpg", "content": "Who are Jay-Z and Kanye West?" }
         }
       ]
     },
     {
-      "name": "Ornithology",
+      "name": "Video Game Soundtracks",
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Ornithology3 100 Question.jpg", "content": "This European city features a gorgeous large palatial pond in the midst of its large public park" },
-          "answer":   { "type": "text", "content": "What is Madrid?" }
+          "question": { "type": "text", "content": "The video game this song is from: https://www.youtube.com/watch?v=VqB1uoDTdKM" },
+          "answer":   { "type": "text", "content": "What is Counter Strike 1.6?" }
         },
         {
           "value": 200,
-          "question": { "type": "image-text", "image": "images/Ornithology3 200 Question.jpg", "content": "This castle in southern Germany is a UNESCO world heritage site, as well as the tallest castle in the world" },
-          "answer":   { "type": "text", "content": "What is Neuschwanstein Castle?" }
+          "question": { "type": "text", "content": "The video game this song is from: https://www.youtube.com/watch?v=HYMnBRJLRTs" },
+          "answer":   { "type": "text", "content": "What is Team Fortress 2?" }
         },
         {
           "value": 300,
-          "question": { "type": "image-text", "image": "images/Ornithology3 300 Question.jpg", "content": "This pier in soutern California features a ferris wheel, an arcade, and is the western terminus of Route 66" },
-          "answer":   { "type": "text", "content": "What is The Santa Monica Pier?" }
+          "question": { "type": "text", "content": "The video game this song is from: https://www.youtube.com/watch?v=jTfScQv4RcE" },
+          "answer":   { "type": "text", "content": "What is John Halo?" }
         },
         {
           "value": 400,
-          "question": { "type": "image-text", "image": "images/Ornithology3 400 Question.jpg", "content": "This country features animals that just walk straight up to you, I swear bro it's so weird" },
-          "answer":   { "type": "image-text", "image": "images/Ornithology3 400 Answer.jpg", "content": "What is Japan?" }
+          "question": { "type": "text", "content": "The video game this song is from: https://www.youtube.com/watch?v=mLyOj_QD4a4" },
+          "answer":   { "type": "text", "content": "What is World of Warcraft?" }
         },
         {
           "value": 500,
-          "question": { "type": "image-text", "image": "images/Ornithology3 500 Question.jpg", "content": "This rather diminutive bird, Ardea atricapilla, inhabits most of Africa and southeast asia and has more than twenty subspecies"},
-          "answer":   { "type": "text", "content": "What is The Little Heron?" }
+          "question": { "type": "text", "content": "The video game this song is from: https://www.youtube.com/watch?v=4yxgEsS8ogM" },
+          "answer":   { "type": "text", "content": "What is Hollow Knight?" }
         }
       ]
     },
