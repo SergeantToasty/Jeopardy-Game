@@ -36,28 +36,28 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "text", "content": "This Montreal based landmark built in 1967 now serves to educate visitors about the water ecosystems of the Great Lakes and St. Lawrence River." },
-          "answer":   { "type": "image-text", "image": "images/AP Bio 100 Answer.jpg", "content": "What is The Bioshpere?" }
+          "question": { "type": "text", "content": "Turns out you can be good at two different things as this person proved by simultaneously being the most successful Jeopardy contestant, and the current host of the show." },
+          "answer":   { "type": "text", "content": "Who is Ken Jennings" }
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "This Montreal based landmark built in 1976 now serves to educate visitors about American ecosystems including the St. Lawrence Gulf." },
-          "answer":   { "type": "image-text", "image": "images/AP Bio 200 Answer.jpg", "content": "What is The Biodome?" }
+          "question": { "type": "text", "content": "This 1997 AL MVP briefly shared an outfield with his own father" },
+          "answer":   { "type": "text", "content": "Who is Ken Griffey Jr?" }
         },
         {
           "value": 300,
-          "question": { "type": "text", "content": "This videogame franchise founded in 2007 features games set everywhere except on solid ground." },
-          "answer":   { "type": "image-text", "image": "images/AP Bio 300 Answer.jpg", "content": "What is Bioshock?" }
+          "question": { "type": "text", "content": "Famous for documentary series on basically every American topic from the Civil War to country music, this is probably your dad's favorite director" },
+          "answer":   { "type": "text", "content": "Who is Ken Burns?" }
         },
         {
           "value": 400,
-          "question": { "type": "text", "content": "Saint Augustine's 'Confessions' (c. 400) is considered one of the first examples of this genre in the western cannon." },
-          "answer":   { "type": "image-text", "image": "images/AP Bio 400 Answer.jpg", "content": "What is Autobiography?" }
+          "question": { "type": "text", "content": "This American comedian is most known for calling people Gay in Community, or saying goodbye to some homosexuals in The Hangover" },
+          "answer":   { "type": "image-text", "image": "images/Ken 400 Answer.jpg", "content": "Who is Ken Jeong" }
         },
         {
           "value": 500,
-          "question": { "type": "image-text", "image": "images/AP Bio 500 Question.jpg", "content": "Describe one of the three structural components of a nucleotide."},
-          "answer":   { "type": "image-text", "image": "images/AP Bio 500 Answer.jpg", "content": "What is a nucleobase, a five-carbon sugar (ribose or deoxyribose), and a phosphate group."}
+          "question": { "type": "text", "content": "These are the full names of the characters played by Ryan Gosling, Simu Liu, Kingsley Ben-Adir, Ncuti Gatwa, Scott Evans, and John Cena in Barbie (2023)"},
+          "answer":   { "type": "text", "content": "Who is Ken?"}
         }
       ]
     },
