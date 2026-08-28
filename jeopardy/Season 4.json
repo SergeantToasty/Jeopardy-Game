@@ -66,28 +66,28 @@
       "questions": [
         {
           "value": 100,
-          "question": { "type": "image-text", "image": "images/Seven Deadly 100 Question.jpg", "content": "This is what Yugi Moto might say in such a situation" },
-          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=AUnPN385wLI" }
+          "question": { "type": "image-text", "image": "images/Seven Deadly 100 Question.jpg", "content": "In The Circle of Life, Rafiki proudly displays Simba from atop this stone promontory." },
+          "answer":   { "type": "text", "content": "What is Pride Rock?" }
         },
         {
           "value": 200,
-          "question": { "type": "text", "content": "'Prepare for trouble!  And make it double!  To protect the world from devastation!  To unite all peoples within our nation!' is the oddly wholesome motto of this antagonistic Team" },
-          "answer":   { "type": "image-text", "image": "images/Daily Double 200 Answer.jpg", "content": "What is Team Rocket?"  }
+          "question": { "type": "text", "content": "In economics, an excess of supply over demand on the market is sometimes referred to by this four letter word" },
+          "answer":   { "type": "text", "content": "What is Glut?" }
         },
         {
           "value": 300,
-          "question": { "type": "text", "content": "This Trini street food, commonly eaten for breakfast, consists of curried chickpeas  served on two fried flatbreads" },
-          "answer":   { "type": "image-text", "image": "images/Daily Double 300 Answer.jpg", "content": "What are Doubles?" }
+          "question": { "type": "text", "content": "Originating in German Romanticism to describe an 'enjoyment of hiking', this term is used today to describe a desire to travel" },
+          "answer":   { "type": "text", "content": "What is Wanderlust?" }
         },
         {
           "value": 400,
-          "question": { "type": "text", "content": "This Berliner Weisse based on 'Daily Serving' offered by Trillium is motivated by a desire to amplify the mouthfeel, fruit addition, and ABV" },
-          "answer":   { "type": "image-text", "image": "images/Daily Double 400 Answer.jpg", "content": "What is Twice the Daily Serving?"}
+          "question": { "type": "text", "content": "Known for being highest and driest in the US, the 'Snowy', silvery, battle born state is known to the postal service by these two letters" },
+          "answer":   { "type": "text", "content": "What is NV?" }
         },
         {
           "value": 500,
-          "question": { "type": "text", "content": "McDonalds Daily Double is a classic menu item featuring two of many things, but only one of this" },
-          "answer":   { "type": "image-text", "image": "images/Daily Double 500 Answer.jpg", "content": "What is a slice of cheese?"}
+          "question": { "type": "image-text", "image": "images/Seven Deadly 500 Question.jpg", "content": "This is what Yugi Moto might say in such a situation" },
+          "answer":   { "type": "youtube", "content": "https://www.youtube.com/watch?v=AUnPN385wLI" }
         }
       ]
     },
